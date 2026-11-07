@@ -414,28 +414,23 @@
         website_hp: form.website_hp.value
       };
 
-      try {
+    try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
 
+        const data = await response.json().catch(() => ({}));
+
         if (response.ok) {
           statusBanner.textContent = 'Thank you! Your message has been sent to our support team.';
           statusBanner.className = 'status-banner status-success';
           form.reset();
         } else {
-          throw new Error('Endpoint unavailable');
+          throw new Error(data.error || `HTTP ${response.status}`);
         }
       } catch (err) {
-        statusBanner.innerHTML = 'Could not send automatically. Please email us directly at <strong>support@thehazel.app</strong>.';
+        statusBanner.innerHTML = `Error (${err.message}). Please email us directly at <strong>support@thehazel.app</strong>.`;
         statusBanner.className = 'status-banner status-error';
-      } finally {
-        submitBtn.disabled = false;
-        btnText.textContent = 'Send Message';
       }
-    });
-  </script>
-</body>
-</html>
