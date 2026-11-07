@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hazel | Fertility, Pregnancy & Baby Care • Intervada Solutions LLC</title>
+  <title>Hazel | Fertility, Pregnancy & Baby Care</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #B88E56;
@@ -22,15 +22,16 @@
       --radius-sm: 8px;
       --radius-md: 16px;
       --radius-lg: 24px;
-      --shadow-sm: 0 1px 3px rgba(15, 20, 28, 0.05);
+      --shadow-sm: 0 1px 3px rgba(15, 20, 28, 0.04);
       --shadow-md: 0 10px 25px -5px rgba(184, 142, 86, 0.12), 0 8px 10px -6px rgba(15, 20, 28, 0.03);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
+      letter-spacing: -0.01em;
       -webkit-font-smoothing: antialiased;
     }
     header {
@@ -42,7 +43,7 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-container {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 1.1rem 1.5rem;
       display: flex;
@@ -52,77 +53,47 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.7rem;
       text-decoration: none;
       color: var(--text-main);
     }
     .brand-logo {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       background: linear-gradient(135deg, #B88E56 0%, #E2C799 100%);
-      border-radius: 12px;
+      border-radius: 11px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-weight: 800;
-      font-size: 1.25rem;
-      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
     }
     .brand-name {
-      font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 1.4rem;
-      letter-spacing: -0.02em;
-    }
-    .brand-tag {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      display: block;
-      font-weight: 500;
+      font-size: 1.35rem;
+      letter-spacing: -0.025em;
     }
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.75rem;
+      gap: 2rem;
       align-items: center;
     }
     nav a {
       text-decoration: none;
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       transition: color 0.2s ease;
     }
     nav a:hover, nav a.active {
       color: var(--primary);
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-      box-shadow: 0 4px 14px rgba(184, 142, 86, 0.35);
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
     .hero {
-      padding: 5rem 1.5rem 4rem;
+      padding: 5rem 1.5rem 3.5rem;
       text-align: center;
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
     }
     .badge {
@@ -133,40 +104,39 @@
       background: var(--primary-light);
       color: var(--primary-dark);
       border-radius: 9999px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
     }
     .hero h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-size: clamp(2.35rem, 4.8vw, 3.5rem);
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       color: var(--text-main);
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 2.5rem;
+      max-width: 660px;
+      margin: 0 auto 1.5rem;
     }
     .features-grid {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 2rem 1.5rem 5rem;
+      padding: 1.5rem 1.5rem 5rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
+      gap: 1.75rem;
     }
     .feature-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 2.5rem;
+      padding: 2.25rem;
       box-shadow: var(--shadow-sm);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -175,30 +145,30 @@
       box-shadow: var(--shadow-md);
     }
     .feature-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: var(--radius-md);
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
       background: var(--primary-light);
     }
     .feature-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
     }
     .feature-card p {
       color: var(--text-muted);
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       margin-bottom: 1rem;
     }
     .feature-card ul {
       list-style: none;
-      padding-top: 0.5rem;
+      padding-top: 0.6rem;
       border-top: 1px dashed var(--border);
     }
     .feature-card li {
@@ -222,7 +192,7 @@
       padding: 4rem 1.5rem;
     }
     .values-container {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -230,9 +200,9 @@
       text-align: left;
     }
     .value-item h4 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
+      letter-spacing: -0.015em;
       margin-bottom: 0.5rem;
       color: var(--primary-dark);
     }
@@ -240,62 +210,42 @@
       color: var(--text-muted);
       font-size: 0.92rem;
     }
-    .support-section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 3rem 2rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-    .support-section h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .support-section p {
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-    }
     footer {
       background: #0F141C;
       color: #94A3B8;
-      padding: 4rem 1.5rem 2rem;
+      padding: 3.5rem 1.5rem 2rem;
       font-size: 0.9rem;
     }
     .footer-container {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
       gap: 3rem;
-      padding-bottom: 3rem;
+      padding-bottom: 2.5rem;
       border-bottom: 1px solid #1E293B;
     }
     .footer-brand h4 {
       color: #F3E7D3;
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
     .footer-brand p {
-      max-width: 400px;
-      margin-bottom: 1rem;
-      line-height: 1.5;
+      max-width: 380px;
+      line-height: 1.55;
     }
     .footer-links h5 {
       color: #F3E7D3;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
     }
     .footer-links ul {
       list-style: none;
     }
     .footer-links li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
     }
     .footer-links a {
       color: #94A3B8;
@@ -306,17 +256,17 @@
       color: #E2C799;
     }
     .footer-bottom {
-      max-width: 1160px;
-      margin: 2rem auto 0;
+      max-width: 1120px;
+      margin: 1.75rem auto 0;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       font-size: 0.82rem;
     }
     @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 0.85rem; }
+      nav ul { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
       .footer-container { grid-template-columns: 1fr; gap: 2rem; }
-      nav ul { display: none; }
     }
   </style>
 </head>
@@ -325,18 +275,14 @@
     <div class="nav-container">
       <a href="index.html" class="brand">
         <div class="brand-logo">H</div>
-        <div>
-          <div class="brand-name">Hazel</div>
-          <span class="brand-tag">by Intervada Solutions LLC</span>
-        </div>
+        <div class="brand-name">Hazel</div>
       </a>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Overview</a></li>
-          <li><a href="#support">Support</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="mailto:support@thehazel.app" class="btn btn-primary">Contact Support</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -344,81 +290,81 @@
 
   <main>
     <section class="hero">
-      <div class="badge">Privacy-First Maternal & Child Health</div>
-      <h1>One Unified Journey from Conception to Toddlerhood</h1>
-      <p>Hazel seamlessly supports growing families across fertility tracking, pregnancy development, 24-hour circadian infant sleep schedules, first foods, and developmental milestones.</p>
+      <div class="badge">From Conception to Toddlerhood</div>
+      <h1>One Calm Companion for Every Chapter of Parenthood</h1>
+      <p>Hazel brings cycle intelligence, week-by-week pregnancy guidance, 24-hour circadian baby sleep dials, 100 first solids, and developmental milestones together in one thoughtful space.</p>
     </section>
 
     <section class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🌸</div>
         <h3>1. Trying to Conceive (TTC)</h3>
-        <p>Comprehensive cycle intelligence and ovulation tracking designed with biological rhythm in mind.</p>
+        <p>Intuitive cycle tracking and ovulation insights designed around your body's natural rhythm.</p>
         <ul>
           <li>Menstrual cycle & period logging</li>
           <li>Basal Body Temperature (BBT) & Cervical Mucus</li>
-          <li>Fertile window & ovulation predictions</li>
-          <li>Symptom, hydration, and medication tracking</li>
+          <li>Fertile window & ovulation estimates</li>
+          <li>Symptom, hydration, and supplement tracking</li>
         </ul>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">🌱</div>
         <h3>2. Pregnancy Care</h3>
-        <p>Week-by-week fetal growth milestones, intuitive routine logs, and reassuring maternal wellness tracking.</p>
+        <p>Week-by-week fetal growth updates, gentle daily check-ins, and reassuring maternal wellness logs.</p>
         <ul>
-          <li>Week-by-week fetal size & developmental facts</li>
-          <li>Fetal kick counter & movement logs</li>
-          <li>Maternal symptoms, appetite, and weight tracking</li>
-          <li>Hydration, activity, and rest monitoring</li>
+          <li>Week-by-week fetal size & developmental highlights</li>
+          <li>Fetal kick counter & movement tracking</li>
+          <li>Maternal symptoms, appetite, and weight logs</li>
+          <li>Daily hydration, rest, and prenatal routines</li>
         </ul>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">🌙</div>
-        <h3>3. Sleep & Daily Care</h3>
-        <p>Predictive 24-hour circadian sleep windows and daily care routines tailored to your baby's natural rhythm.</p>
+        <h3>3. Circadian Sleep & Daily Care</h3>
+        <p>Visual 24-hour sleep dials and smart wake windows tailored to your baby's evolving rhythm.</p>
         <ul>
-          <li>Algorithmic nap, wake window, and bedtime planning</li>
-          <li>Breastfeeding, bottle, and pumping logs</li>
-          <li>Diaper tracking, bath routines, and baby meds</li>
-          <li>Continuous background ambient loops & lullabies</li>
+          <li>Adaptive nap, wake window, and bedtime projections</li>
+          <li>Nursing, bottle feeding, and pumping logs</li>
+          <li>Diaper tracking, bath routines, and soothing reminders</li>
+          <li>Continuous background sleep soundscapes & lullabies</li>
         </ul>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">🥑</div>
-        <h3>4. First Foods & Solids</h3>
-        <p>Guided introduction to solids, allergen tracking, and wholesome meal inspiration for growing babies.</p>
+        <h3>4. 100 First Solids & Allergens</h3>
+        <p>Guided introduction to solid foods, Big 9 allergen safety ladders, and nutritious food pairings.</p>
         <ul>
-          <li>Comprehensive food database across all groups</li>
-          <li>Common allergen exposure logging & reaction notes</li>
-          <li>Age-appropriate recipe ideas and textures</li>
-          <li>Pediatrician-informed safety principles</li>
+          <li>Interactive 100 First Solids progress dial</li>
+          <li>Big 9 Allergen step-by-step safety tracker</li>
+          <li>Smart iron & brain-boosting food combinations</li>
+          <li>Age-appropriate preparation & texture notes</li>
         </ul>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">🧸</div>
-        <h3>5. Milestones & Activities</h3>
-        <p>Track your baby's motor, cognitive, speech, and social milestones from birth through 24 months.</p>
+        <h3>5. Milestones & Play</h3>
+        <p>Follow your baby's motor, cognitive, speech, and social growth from birth through 24 months.</p>
         <ul>
-          <li>Age-appropriate milestones (0 to 24 months)</li>
-          <li>Speech, cognitive, motor, and social skills</li>
-          <li>Play ideas and developmental activity suggestions</li>
-          <li>Informed by pediatric literature & Pathways.org</li>
+          <li>Stage-by-stage milestones (0 to 24 months)</li>
+          <li>Motor, cognitive, speech, and social development</li>
+          <li>Gentle daily play & activity ideas</li>
+          <li>Grounded in established pediatric guidance</li>
         </ul>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <h3>6. Zero-Ad Privacy & Family Sync</h3>
-        <p>Real-time family collaboration without sacrificing the privacy of your sensitive health data.</p>
+        <div class="feature-icon">👨‍👩‍👧</div>
+        <h3>6. Partner & Caregiver Sync</h3>
+        <p>Stay effortlessly coordinated with your partner, grandparents, or nanny across every feeding and nap.</p>
         <ul>
-          <li>Zero data sale or commercial data brokerage</li>
-          <li>No third-party ad networks or tracking SDKs</li>
-          <li>Live real-time sync with partner or caregiver</li>
-          <li>End-to-end cloud encryption (AES-256 / TLS)</li>
+          <li>Real-time shared logs across devices</li>
+          <li>Instant updates for naps, feeds, and diapers</li>
+          <li>Soothing Daylight, Nightfall, and Lavender themes</li>
+          <li>Calm, ad-free experience built for late-night check-ins</li>
         </ul>
       </div>
     </section>
@@ -426,56 +372,46 @@
     <section class="values-banner">
       <div class="values-container">
         <div class="value-item">
-          <h4>🔒 Your Data Stays Yours</h4>
-          <p>We do not sell, rent, or trade your personal or health data. We never share your logs with advertising platforms or data brokers.</p>
+          <h4>✨ Visual 24-Hour Dials</h4>
+          <p>See your baby's sleep windows, 100 first solids, and daily rhythms at a single glance without digging through cluttered spreadsheets.</p>
         </div>
         <div class="value-item">
-          <h4>🩺 Educational & Supportive</h4>
-          <p>Our algorithms provide gentle, mathematical routines and educational facts—never replacing professional medical or clinical advice.</p>
+          <h4>🩺 Thoughtful & Supportive</h4>
+          <p>Designed to bring calm structure and educational guidance to your daily routine alongside your pediatrician's care.</p>
         </div>
         <div class="value-item">
-          <h4>👨‍👩‍👧 Family Collaboration</h4>
-          <p>Seamlessly share daily care routines, feeding logs, and sleep timers with your spouse, partner, or trusted caregivers.</p>
+          <h4>🤝 Shared Family Rhythm</h4>
+          <p>Whether you're logging a 3 AM feeding or checking off a new solid food, everyone caring for your baby stays on the same page.</p>
         </div>
       </div>
-    </section>
-
-    <section id="support" class="support-section">
-      <h2>Hazel Customer Support</h2>
-      <p>Need help with your account, family sharing, subscriptions, or data privacy requests? Our team typically responds within 24 hours.</p>
-      <a href="mailto:support@thehazel.app" class="btn btn-primary">Email support@thehazel.app</a>
     </section>
   </main>
 
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
-        <h4>Hazel • Intervada Solutions LLC</h4>
-        <p>Hazel is developed and published by Intervada Solutions LLC, a Wyoming Limited Liability Company dedicated to thoughtful, privacy-first software for parents and families.</p>
-        <p><strong>Corporate Address:</strong><br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</p>
-        <p><strong>D-U-N-S® Number:</strong> 149997352</p>
+        <h4>Hazel</h4>
+        <p>A calm, unified companion supporting growing families from fertility and pregnancy through baby sleep, first foods, and early milestones.</p>
       </div>
       <div class="footer-links">
-        <h5>Legal & Compliance</h5>
+        <h5>Legal</h5>
         <ul>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms and Conditions of Use</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
           <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
-          <li><a href="privacy.html#gdpr">EU / UK / Swiss GDPR Compliance</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK / Swiss GDPR</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h5>Contact & Support</h5>
+        <h5>Support</h5>
         <ul>
+          <li><a href="contact.html">Contact Support</a></li>
           <li><a href="mailto:support@thehazel.app">support@thehazel.app</a></li>
-          <li><a href="mailto:contact@intervadasolutions.com">contact@intervadasolutions.com</a></li>
-          <li><a href="https://intervadasolutions.com">intervadasolutions.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
-      <div>Hazel™ is a product and trademark of Intervada Solutions LLC.</div>
     </div>
   </footer>
 </body>
