@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Support | Hazel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #B88E56;
+      --primary-dark: #9B7440;
+      --primary-light: #F3E7D3;
+      --input-bg: #F3EFE6;
+      --input-border: #E5DEC9;
+      --text-main: #0F141C;
+      --text-muted: #6E7178;
+      --bg: #F7F4EE;
+      --surface: #FFFFFF;
+      --border: #E8E1D5;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 10px rgba(15, 20, 28, 0.04);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: rgba(247, 244, 238, 0.92);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #B88E56 0%, #E2C799 100%);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.025em;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    main {
+      flex: 1;
+      max-width: 580px;
+      width: 100%;
+      margin: 2.5rem auto 5rem;
+      padding: 0 1.25rem;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.25rem;
+    }
+    .intro-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: var(--input-bg);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .intro-text h2 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: var(--text-main);
+    }
+    .intro-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .field-group {
+      margin-bottom: 1.35rem;
+    }
+    .field-label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .field-input, .field-select, .field-textarea {
+      width: 100%;
+      background-color: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 14px;
+      padding: 0.9rem 1.1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .field-input::placeholder, .field-textarea::placeholder {
+      color: #9C988E;
+    }
+    .field-input:focus, .field-select:focus, .field-textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(184, 142, 86, 0.15);
+      background-color: #FAF8F3;
+    }
+    .field-textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .submit-btn {
+      width: 100%;
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 14px;
+      padding: 1rem 1.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover {
+      background-color: var(--primary-dark);
+    }
+    .submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .status-banner {
+      display: none;
+      margin-top: 1.1rem;
+      padding: 0.95rem 1.1rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    .status-success {
+      display: block;
+      background-color: #ECFDF5;
+      color: #065F46;
+      border: 1px solid #A7F3D0;
+    }
+    .status-error {
+      display: block;
+      background-color: #FEF2F2;
+      color: #991B1B;
+      border: 1px solid #FECACA;
+    }
+    footer {
+      background: #0F141C;
+      color: #94A3B8;
+      padding: 3.5rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #1E293B;
+    }
+    .footer-brand h4 {
+      color: #F3E7D3;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      max-width: 380px;
+      line-height: 1.55;
+    }
+    .footer-links h5 {
+      color: #F3E7D3;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.55rem;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #E2C799;
+    }
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 1.75rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 0.85rem; }
+      nav ul { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">H</div>
+        <div class="brand-name">Hazel</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Support</h1>
+
+    <div class="intro-card">
+      <div class="intro-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+        </svg>
+      </div>
+      <div class="intro-text">
+        <h2>Here to support you</h2>
+        <p>Have questions or need help navigating? Send us a message directly.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="supportForm">
+        <div class="field-group">
+          <label class="field-label" for="topic">Topic</label>
+          <select id="topic" name="topic" class="field-select" required>
+            <option value="App Question / Help">App Question / Help</option>
+            <option value="Account & Family Sync">Account &amp; Family Sync</option>
+            <option value="Subscription & Billing">Subscription &amp; Billing</option>
+            <option value="Bug Report / Technical Issue">Bug Report / Technical Issue</option>
+            <option value="Feature Request / Feedback">Feature Request / Feedback</option>
+            <option value="Data & Privacy Request">Data &amp; Privacy Request</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="email">Reply Email</label>
+          <input type="email" id="email" name="email" class="field-input" placeholder="you@example.com" required>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" class="field-input" placeholder="e.g. Question about sleep schedule or family sync" required>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="message">How Can We Help?</label>
+          <textarea id="message" name="message" class="field-textarea" placeholder="Share the details with us..." required></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam field -->
+        <input type="text" name="website_hp" style="display:none" tabindex="-1" autocomplete="off">
+
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+          <span id="btnText">Send Message</span>
+        </button>
+
+        <div id="statusBanner" class="status-banner"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Hazel</h4>
+        <p>A calm, unified companion supporting growing families from fertility and pregnancy through baby sleep, first foods, and early milestones.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK / Swiss GDPR</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="contact.html">Contact Support</a></li>
+          <li><a href="mailto:support@thehazel.app">support@thehazel.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('supportForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const statusBanner = document.getElementById('statusBanner');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      statusBanner.className = 'status-banner';
+      statusBanner.style.display = 'none';
+
+      const payload = {
+        topic: form.topic.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+        website_hp: form.website_hp.value
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          statusBanner.textContent = 'Thank you! Your message has been sent to our support team.';
+          statusBanner.className = 'status-banner status-success';
+          form.reset();
+        } else {
+          throw new Error('Endpoint unavailable');
+        }
+      } catch (err) {
+        statusBanner.innerHTML = 'Could not send automatically. Please email us directly at <strong>support@thehazel.app</strong>.';
+        statusBanner.className = 'status-banner status-error';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Message';
+      }
+    });
+  </script>
+</body>
+</html>
