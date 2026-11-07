@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maternity Hub | Intervada Solutions LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5A7865;
+      --primary-light: #E8EFEA;
+      --accent: #E2C799;
+      --accent-soft: #F9F5EC;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 500;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 14px rgba(90, 120, 101, 0.35);
+    }
+    .btn-primary:hover {
+      background: #4A6354;
+      transform: translateY(-1px);
+    }
+    .hero {
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      color: #0F172A;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+    .features-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      background: var(--accent-soft);
+    }
+    .feature-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card ul {
+      list-style: none;
+      padding-top: 0.5rem;
+      border-top: 1px dashed var(--border);
+    }
+    .feature-card li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .feature-card li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .values-banner {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 1.5rem;
+    }
+    .values-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      text-align: left;
+    }
+    .value-item h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .value-item p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 4rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+    .footer-brand h4 {
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      max-width: 400px;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .footer-links h5 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 768px) {
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">M</div>
+        <div>
+          <div class="brand-name">Maternity Hub</div>
+          <span class="brand-tag">by Intervada Solutions LLC</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Overview</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="mailto:contact@intervadasolutions.com" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">Privacy-First Maternal & Child Health</div>
+      <h1>One Unified Journey from Conception to Toddlerhood</h1>
+      <p>Maternity Hub seamlessly supports growing families across fertility tracking, pregnancy development, infant sleep schedules, first foods, and developmental milestones.</p>
+    </section>
+
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌸</div>
+        <h3>1. Trying to Conceive (TTC)</h3>
+        <p>Comprehensive cycle intelligence and ovulation tracking designed with biological rhythm in mind.</p>
+        <ul>
+          <li>Menstrual cycle & period logging</li>
+          <li>Basal Body Temperature (BBT) & Cervical Mucus</li>
+          <li>Fertile window & ovulation predictions</li>
+          <li>Symptom, hydration, and medication tracking</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h3>2. Pregnancy Care</h3>
+        <p>Week-by-week fetal growth milestones, intuitive routine logs, and reassuring maternal wellness tracking.</p>
+        <ul>
+          <li>Week-by-week fetal size & developmental facts</li>
+          <li>Fetal kick counter & movement logs</li>
+          <li>Maternal symptoms, appetite, and weight tracking</li>
+          <li>Hydration, activity, and rest monitoring</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌙</div>
+        <h3>3. Sleep & Daily Care</h3>
+        <p>Predictive sleep windows and daily care routines tailored to your baby's natural wake windows.</p>
+        <ul>
+          <li>Algorithmic nap, wake window, and bedtime planning</li>
+          <li>Breastfeeding, bottle, and pumping logs</li>
+          <li>Diaper tracking, bath routines, and baby meds</li>
+          <li>Continuous background ambient loops & lullabies</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🥑</div>
+        <h3>4. First Foods & Solids</h3>
+        <p>Guided introduction to solids, allergen tracking, and wholesome meal inspiration for growing babies.</p>
+        <ul>
+          <li>Comprehensive food database across all groups</li>
+          <li>Common allergen exposure logging & reaction notes</li>
+          <li>Age-appropriate recipe ideas and textures</li>
+          <li>Pediatrician-informed safety principles</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧸</div>
+        <h3>5. Milestones & Activities</h3>
+        <p>Track your baby's motor, cognitive, speech, and social milestones from birth through 24 months.</p>
+        <ul>
+          <li>Age-appropriate milestones (0 to 24 months)</li>
+          <li>Speech, cognitive, motor, and social skills</li>
+          <li>Play ideas and developmental activity suggestions</li>
+          <li>Informed by pediatric literature & Pathways.org</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>6. Zero-Ad Privacy & Family Sync</h3>
+        <p>Real-time family collaboration without sacrificing the privacy of your sensitive health data.</p>
+        <ul>
+          <li>Zero data sale or commercial data brokerage</li>
+          <li>No third-party ad networks or tracking SDKs</li>
+          <li>Live real-time sync with partner or caregiver</li>
+          <li>End-to-end cloud encryption (AES-256 / TLS)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="values-banner">
+      <div class="values-container">
+        <div class="value-item">
+          <h4>🔒 Your Data Stays Yours</h4>
+          <p>We do not sell, rent, or trade your personal or health data. We never share your logs with advertising platforms or data brokers.</p>
+        </div>
+        <div class="value-item">
+          <h4>🩺 Educational & Supportive</h4>
+          <p>Our algorithms provide gentle, mathematical routines and educational facts—never replacing professional medical or clinical advice.</p>
+        </div>
+        <div class="value-item">
+          <h4>👨‍👩‍👧 Family Collaboration</h4>
+          <p>Seamlessly share daily care routines, feeding logs, and sleep timers with your spouse, partner, or trusted caregivers.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Intervada Solutions LLC</h4>
+        <p>Maternity Hub is developed and published by Intervada Solutions LLC, a Wyoming Limited Liability Company dedicated to thoughtful, privacy-first software for parents and families.</p>
+        <p><strong>Corporate Address:</strong><br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</p>
+        <p><strong>D-U-N-S® Number:</strong> 149997352</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal & Compliance</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms and Conditions of Use</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK GDPR Compliance</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact & Support</h5>
+        <ul>
+          <li><a href="mailto:contact@intervadasolutions.com">contact@intervadasolutions.com</a></li>
+          <li><a href="mailto:support@intervadasolutions.com">support@intervadasolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+      <div>Maternity Hub™ is a trademark of Intervada Solutions LLC.</div>
+    </div>
+  </footer>
+</body>
+</html>

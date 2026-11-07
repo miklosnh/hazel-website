@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Maternity Hub &bull; Intervada Solutions LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5A7865;
+      --primary-light: #E8EFEA;
+      --accent: #E2C799;
+      --accent-soft: #F9F5EC;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 500;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 14px rgba(90, 120, 101, 0.35);
+    }
+    .btn-primary:hover {
+      background: #4A6354;
+    }
+    .legal-container {
+      max-width: 900px;
+      margin: 3rem auto 6rem;
+      padding: 3.5rem 3rem;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-container h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0F172A;
+      margin-bottom: 0.5rem;
+    }
+    .legal-container h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #1E293B;
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-container h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-container h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #475569;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-container p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+    }
+    .legal-container ul, .legal-container ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+    }
+    .legal-container li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-container hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    th {
+      background: #F8FAFC;
+      padding: 0.9rem 1rem;
+      font-weight: 700;
+      color: #1E293B;
+      border-bottom: 2px solid var(--border);
+    }
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: #334155;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .callout {
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 1.75rem 0;
+      border-left: 5px solid;
+    }
+    .callout-warning {
+      background: #FEF2F2;
+      border-color: #EF4444;
+      color: #991B1B;
+    }
+    .callout-warning .callout-title {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #B91C1C;
+      font-size: 1.05rem;
+    }
+    .callout-info {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1E40AF;
+    }
+    .callout-info .callout-title {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #1D4ED8;
+      font-size: 1.05rem;
+    }
+    footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 4rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+    .footer-brand h4 {
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      max-width: 400px;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .footer-links h5 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 768px) {
+      .legal-container { padding: 2rem 1.25rem; margin: 1.5rem 0.75rem 4rem; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">M</div>
+        <div>
+          <div class="brand-name">Maternity Hub</div>
+          <span class="brand-tag">by Intervada Solutions LLC</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+          <li><a href="terms.html" class="">Terms of Service</a></li>
+          <li><a href="mailto:contact@intervadasolutions.com" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="legal-container">
+      <h1>PRIVACY POLICY</h1>
+<p><strong>Effective Date:</strong> October 25, 2026<br />
+<strong>Last Updated:</strong> October 25, 2026</p>
+<h2>1. Introduction and Who We Are</h2>
+<p>Welcome to <strong>Maternity Hub</strong> (the "App"). This Privacy Policy explains how <strong>Intervada Solutions LLC</strong>, a limited liability company registered in the State of Wyoming, United States ("Intervada Solutions," "Company," "we," "us," or "our"), collects, stores, uses, protects, and handles your personal data when you use our mobile application, our website located at <strong>https://intervadasolutions.com</strong> (the "Website"), and all related features, content, and services (collectively, the "Services").</p>
+<ul>
+<li><strong>Data Controller / Legal Entity:</strong> Intervada Solutions LLC  </li>
+<li><strong>D-U-N-S® Number:</strong> 149997352  </li>
+<li><strong>Registered Office Address:</strong> 30 N Gould St, STE R, Sheridan, WY 82801, United States  </li>
+<li><strong>General Inquiries:</strong> contact@intervadasolutions.com  </li>
+<li><strong>Privacy &amp; Support Inquiries:</strong> support@intervadasolutions.com  </li>
+</ul>
+<p>This Privacy Policy is designed to comply with global privacy standards, including the European Union General Data Protection Regulation ("EU GDPR"), the UK General Data Protection Regulation ("UK GDPR") and Data Protection Act 2018, the Swiss Federal Act on Data Protection ("FADP"), the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), the Washington My Health My Data Act ("MHMDA"), Nevada Revised Statutes Chapter 603A, Canada’s Personal Information Protection and Electronic Documents Act ("PIPEDA"), and the Australian Privacy Principles ("APPs") under the Privacy Act 1988 (Cth).</p>
+<p><strong>Our Core Privacy Promise:</strong><br />
+Your body, your family, and your data belong to you. <strong>We do not sell, rent, trade, or give away your personal information or health data to third parties.</strong> We never use your fertility, cycle, pregnancy, or infant care logs for third-party advertising, behavioral profiling, or data brokerage. Your information is processed strictly to provide, synchronize, secure, and improve the Services you request.</p>
+<hr />
+<h2>2. Information We Collect</h2>
+<p>We adhere to the principle of data minimization and collect only the information necessary to deliver the core functionality of the App across its Trying to Conceive (TTC), Pregnancy, and Infant Care chapters.</p>
+<h3>2.1. Personal Information You Provide Directly</h3>
+<ul>
+<li><strong>Account &amp; Profile Information:</strong> When you create an account, we collect your email address, name or preferred nickname, encrypted password, and basic profile settings (such as your selected App chapter/mode, preferred measurement units, language, and time zone). Providing a first name or nickname is optional.</li>
+<li><strong>Partner &amp; Family Sharing Information:</strong> If you choose to invite a partner, spouse, or family caregiver to synchronize logs, we collect the invited member’s email address or link their authenticated account to your shared family profile at your explicit direction.</li>
+<li><strong>Customer Support Communications:</strong> When you contact us at support@intervadasolutions.com or contact@intervadasolutions.com, we collect your name, email address, and the contents of your message so we can assist you.</li>
+</ul>
+<h3>2.2. Sensitive Health, Maternal, and Infant Care Data You Voluntarily Log</h3>
+<p>Depending on which chapters and features of the App you choose to use, you may voluntarily enter health-related and developmental data ("Special Category Data" under the EU/UK GDPR and "Consumer Health Data" / "Sensitive Personal Information" under applicable U.S., Canadian, and Australian laws):
+1. <strong>Trying to Conceive (TTC) &amp; Cycle Tracking Data:</strong> Menstrual period start and end dates, menstrual flow intensity, basal body temperature (BBT), cervical mucus observations, ovulation test results, pregnancy test results, relevant fertility-related medical conditions you choose to note, medications/pills/supplements taken, physical symptoms, mood, and daily water/hydration intake.
+2. <strong>Pregnancy Data:</strong> Estimated due date, last menstrual period or conception date, maternal weight logs, fetal movement/kick counts, physical activity, rest and sleep logs, appetite, pregnancy symptoms, mood, hydration, and prenatal vitamins/medications taken.
+3. <strong>Infant Sleep &amp; Daily Care Data:</strong> Your child’s name or nickname, birth date/age, wake times, nap start and end times, bedtimes, night wakings, breastfeeding sessions (duration and side), bottle feeding volumes and contents, breast milk pumping logs, diaper changes (wet/soiled), baby body temperature, baby medication logs, and baby bath routines.
+4. <strong>Infant Solids &amp; Nutrition Data:</strong> Solid foods introduced across food groups (vegetables, fruits, proteins, grains, dairy, healthy fats, beans, seeds, herbs), water intake, exposure to common food allergens, observed allergic reactions or food sensitivities, and saved recipe preferences.
+5. <strong>Infant Developmental Milestones Data:</strong> Reached developmental milestones and parent notes across Motor skills, Cognitive skills, Speech skills, and Social skills from age 0 to 24 months.</p>
+<h3>2.3. Information Collected Automatically</h3>
+<p>When you use the Services, we automatically collect limited technical information strictly required to maintain app functionality, security, and local scheduling:
+* <strong>Device &amp; Technical Data:</strong> Device model, operating system type and version, App version, device language, crash logs, and diagnostic performance data.
+* <strong>Approximate Location &amp; Time Zone:</strong> Your device’s time zone and country (derived from system settings or IP address) to accurately calculate daily routines, sleep schedules, and local reminders, and to display appropriate regional subscription pricing. <strong>We do not collect precise GPS location data.</strong>
+* <strong>In-App Usage &amp; Local Preferences:</strong> Your saved favorite sleep soundscapes, sleep timer settings, and feature usage needed to generate your personal in-app statistics.</p>
+<hr />
+<h2>3. How We Use Your Information and Lawful Bases</h2>
+<p>We process your personal data only for specific, explicit, and legitimate purposes:</p>
+<div class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Purpose of Processing</th>
+      <th>Categories of Data Used</th>
+      <th>Lawful Basis (EU/UK GDPR & Global Equivalents)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Delivering Core App Features & Algorithmic Calculations:</strong> Calculating cycle stages (menstruation, follicular phase, fertile window, luteal phase), weekly pregnancy progress, estimated baby nap/bedtime/wake windows based on historical logs and age norms, personal statistics, solid food/allergen tracking, and milestone logging.</td>
+      <td>Account Data, TTC Data, Pregnancy Data, Infant Sleep, Solids, & Milestone Data</td>
+      <td><strong>Explicit Consent</strong> (GDPR Art. 6(1)(a) & Art. 9(2)(a)) for health/special category data; <strong>Performance of a Contract</strong> (Art. 6(1)(b)) for core service delivery.</td>
+    </tr>
+    <tr>
+      <td><strong>Account Management, Cloud Backup & Family Sync:</strong> Authenticating your login, backing up your logs across devices, and syncing real-time updates with your invited partner or family caregiver.</td>
+      <td>Account Data, Logged App Data</td>
+      <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) & <strong>Explicit Consent</strong> (Art. 6(1)(a)).</td>
+    </tr>
+    <tr>
+      <td><strong>Ambient Soundscapes & Background Audio:</strong> Streaming soothing noises, nature/travel loops, bedtime lullabies, and playtime tracks, and storing your favorite tracks and timer settings.</td>
+      <td>Device Data, Local Preferences</td>
+      <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)).</td>
+    </tr>
+    <tr>
+      <td><strong>Push Notifications & Routine Reminders:</strong> Sending local or remote push notifications for cycle reminders, baby routine schedules, or partner log updates that you opt to enable.</td>
+      <td>Account Data, Push Notification Token, Routine Logs</td>
+      <td><strong>Consent</strong> (Art. 6(1)(a)). You can disable notifications at any time in your device settings.</td>
+    </tr>
+    <tr>
+      <td><strong>Subscriptions & Billing Verification:</strong> Verifying subscription status and entitlements purchased through the Apple App Store or Google Play Store.</td>
+      <td>Account Data, App Store Transaction Identifiers</td>
+      <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) & <strong>Legal Obligation</strong> (Art. 6(1)(c)).</td>
+    </tr>
+    <tr>
+      <td><strong>Customer Support, Security & Debugging:</strong> Responding to your inquiries, preventing unauthorized access or fraud, enforcing our Terms, and fixing technical bugs.</td>
+      <td>Account Data, Support Messages, Device & Diagnostic Data</td>
+      <td><strong>Legitimate Interests</strong> (Art. 6(1)(f)) & <strong>Legal Obligation</strong> (Art. 6(1)(c)).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Principles of Processing</h3>
+<ul>
+<li><strong>Purpose Limitation:</strong> Data collected for one purpose is never repurposed for incompatible uses without your explicit consent.</li>
+<li><strong>No Automated Clinical Decision-Making:</strong> Our mathematical algorithms generate general calendar estimates and routine projections; we do not engage in automated decision-making that produces legal or clinical effects.</li>
+</ul>
+<hr />
+<h2>4. Strict Policy Against Third-Party Data Sharing, Sale, and Advertising</h2>
+<h3>4.1. No Sale or Rental of Personal or Health Data</h3>
+<p><strong>We do not sell, rent, lease, trade, or give away your personal information or health data to any third party, data broker, advertising network, or analytics reseller.</strong> In compliance with Apple App Store Review Guidelines (Section 5.1) and Google Play Developer Policies, we never use health, fertility, pregnancy, or infant data for advertising, marketing, or use-based data mining.</p>
+<h3>4.2. External Promotional Campaigns and Influencer Marketing</h3>
+<p>We may run promotional campaigns on external platforms (such as Meta, TikTok, or Google) and work with influencers. We never share your health, cycle, pregnancy, or baby logs with advertising platforms.</p>
+<h3>4.3. Essential Service Providers (Sub-Processors)</h3>
+<p>To host and operate the App securely, we rely on a strictly limited number of trusted infrastructure providers that act as our <strong>Data Processors</strong> under binding data processing agreements. Each processor is contractually required to provide the same or equal protection of user data as stated in this Privacy Policy and required by Apple and Google guidelines, and is prohibited from using your data for its own purposes:</p>
+<div class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Sub-Processor</th>
+      <th>Role / Service Provided</th>
+      <th>Data Processed</th>
+      <th>Location / Safeguards</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Supabase, Inc.</strong></td>
+      <td>Encrypted cloud database hosting, user authentication, and audio media storage</td>
+      <td>Account identifiers, encrypted user logs, authentication tokens</td>
+      <td>United States / EU (Standard Contractual Clauses & AES-256 Encryption)</td>
+    </tr>
+    <tr>
+      <td><strong>Apple Inc.</strong></td>
+      <td>iOS App Store distribution, Sign in with Apple, Apple Push Notification service (APNs), In-App Purchases</td>
+      <td>Device push tokens, anonymized subscription receipts, optional Apple ID relay</td>
+      <td>United States / Global</td>
+    </tr>
+    <tr>
+      <td><strong>Google LLC</strong></td>
+      <td>Google Play Store distribution, Google Sign-In, Firebase Cloud Messaging (FCM) for push notifications, Google Play Billing</td>
+      <td>Device push tokens, anonymized subscription receipts, optional Google Auth profile</td>
+      <td>United States / Global</td>
+    </tr>
+    <tr>
+      <td><strong>RevenueCat, Inc.</strong> <em>(if applicable)</em></td>
+      <td>Cross-platform subscription receipt validation and entitlement management</td>
+      <td>Anonymous App User ID, App Store / Play Store purchase receipts (no health data or card numbers)</td>
+      <td>United States (Standard Contractual Clauses)</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub, Inc.</strong></td>
+      <td>Static website hosting (GitHub Pages) for intervadasolutions.com</td>
+      <td>Standard web server HTTP request logs (IP address, browser user-agent) when visiting the Website</td>
+      <td>United States / Global</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>4.4. Partner / Family Synchronization (At Your Direction)</h3>
+<p>If you choose to link your account with a partner, spouse, or caregiver, the logs you record in shared chapters will synchronize with that authorized user. You have complete control over family sharing and may revoke a partner’s access at any time in your App settings.</p>
+<h3>4.5. Apple In-App Purchase Consumption Data</h3>
+<p>If you use our App on iOS and make in-app purchases, you consent to our sharing of limited data regarding your usage and consumption of purchased subscription features with Apple, strictly as part of our efforts to help Apple resolve refund requests you submit to Apple. This sharing is conducted in strict compliance with Apple’s policies and never includes your logged health, cycle, pregnancy, or baby care entries.</p>
+<h3>4.6. Google API Services Limited Use Disclosure</h3>
+<p>To the extent our Services access, use, or transfer information received from Google APIs, our use and transfer to any other app of information received from Google APIs will adhere to the <strong>Google API Services User Data Policy</strong>, including the <strong>Limited Use</strong> requirements. Specifically: (a) we limit our use of data to providing or improving user-facing features prominent in the App's interface; (b) we never transfer or sell data to third parties for advertising, data brokerage, or credit-worthiness determination; (c) we do not allow humans to read user data unless we have your affirmative agreement for a specific support request or as required for security/legal compliance; and (d) we never use user data to train third-party or generalized artificial intelligence models.</p>
+<h3>4.7. Legal Obligations, Vital Safety, and Business Transfers</h3>
+<p>We may preserve or disclose limited information only if strictly required to do so by applicable law, subpoena, or valid court order, or when we believe in good faith that disclosure is necessary to protect the vital safety of an individual, prevent fraud or security breaches, or defend against legal claims. In the event of a merger, acquisition, reorganization, or sale of assets of Intervada Solutions LLC, user information may be transferred only if the successor entity commits to bound compliance with the privacy protections set forth in this Privacy Policy and after providing notice to users where required by law.</p>
+<hr />
+<h2>5. Data Retention and Account / Data Deletion</h2>
+<h3>5.1. How Long We Retain Your Data</h3>
+<p>We retain your personal information and logged data for as long as your account remains active and as necessary to provide you with the Services. If you delete the App from your device without deleting your account, or if your account becomes inactive, we retain your encrypted data so you can restore your history if you reinstall the App. If your account remains completely inactive for twenty-four (24) consecutive months, we <strong>may</strong> delete your inactive account and associated data after sending a prior notice to your registered email address. You may request earlier deletion at any time.</p>
+<h3>5.2. How to Revoke Consent and Permanently Delete Your Account &amp; Data</h3>
+<p>You have the absolute right to revoke your consent and delete your account and personal data at any time:
+1. <strong>In-App Account Deletion (Direct &amp; Self-Service):</strong> You can permanently delete your account and all associated TTC, Pregnancy, and Infant Care logs directly inside the App by navigating to <strong>Settings / Profile &gt; Delete Account</strong> and confirming deletion.
+2. <strong>Deletion via Email Request:</strong> You may also request complete account erasure, or deletion of specific data categories, at any time by emailing <strong>support@intervadasolutions.com</strong> from the email address associated with your account.</p>
+<p><strong>How Deletion Works &amp; Timelines:</strong><br />
+When you trigger account deletion in the App, your personal identifiers and health logs are immediately unlinked and purged from our active production database. If you submit a deletion request via email, we will process it within thirty (30) days (and within fifteen (15) business days where required by applicable U.S. state health privacy laws). Complete permanent erasure from encrypted disaster-recovery backup archives occurs automatically within thirty (30) to ninety (90) days. Please note that once deletion is completed, your logs cannot be recovered. We may retain only minimal, non-health transaction records where strictly required by tax, accounting, or statutory legal obligations.</p>
+<hr />
+<h2>6. Children’s Privacy (COPPA &amp; Global Minors Compliance)</h2>
+<p><strong>Our Services are directed exclusively to adults (parents, expectant parents, and legal guardians) and are not intended for use by children.</strong>
+* <strong>Minimum Age Requirements:</strong> You must be at least <strong>18 years of age</strong> to create an account and use the Services (or at least <strong>16 years of age</strong> in the European Economic Area, the United Kingdom, Switzerland, and Canada, or <strong>13 years of age</strong> in the United States and Australia with verifiable parent or guardian consent).
+* <strong>Infant and Child Care Logs:</strong> We do not knowingly collect personal information directly from children under the age of 13 (or under 16 in the EEA, UK, Switzerland, and Canada). Where you input information about your own baby or toddler into the App—such as your child’s birth date, sleep patterns, feeding history, known food allergens, or reached developmental milestones—that information is provided to us <strong>solely by you as the adult parent or legal guardian</strong> to assist you in tracking your child’s care.
+* <strong>Immediate Removal:</strong> If we discover or are notified that a child under the applicable minimum age has registered an account or submitted personal data directly to us without parental consent, we will immediately terminate the account and permanently delete all associated data. If you believe a child has provided data to us, please contact <strong>support@intervadasolutions.com</strong>.</p>
+<hr />
+<h2>7. Data Security</h2>
+<p>We implement rigorous technical, physical, and organizational safeguards designed to protect sensitive personal and health data against unauthorized access, loss, misuse, alteration, or disclosure:
+* <strong>Encryption in Transit:</strong> All network traffic between the App/Website and our servers is encrypted using modern Transport Layer Security (<strong>HTTPS / TLS 1.2 and TLS 1.3</strong>).
+* <strong>Encryption at Rest:</strong> All cloud database tables, authentication credentials, and backup snapshots are encrypted at rest using industry-standard <strong>AES-256</strong> encryption.
+* <strong>Cryptographic Row-Level Security (RLS):</strong> Our database architecture enforces strict access controls so that your personal and family logs can only be queried by your authenticated user token (and any partner account you explicitly link).
+* <strong>Strict Internal Access Controls:</strong> Access to production infrastructure is restricted to authorized personnel bound by strict confidentiality obligations.
+* <strong>Security Incident Notification:</strong> While no method of electronic storage or transmission over the internet is 100% impenetrable, in the unlikely event of a security breach affecting your personal data, we will promptly notify affected users and relevant data protection authorities in accordance with applicable law.</p>
+<hr />
+<h2>8. Your Privacy Rights and How to Exercise Them</h2>
+<p>Regardless of where you live, we extend high-standard data protection rights to all users of Maternity Hub:
+1. <strong>Right to Access &amp; Know:</strong> You have the right to confirm whether we process your personal data and to receive a copy of the personal data we hold about you.
+2. <strong>Right to Data Portability:</strong> You have the right to receive your personal data in a structured, commonly used, and machine-readable format (such as JSON or CSV) so you can transfer it to another service.
+3. <strong>Right to Rectification (Correction):</strong> You can edit, update, or correct your profile details and logged entries directly within the App at any time, or ask us to correct inaccurate information.
+4. <strong>Right to Erasure ("Right to be Forgotten"):</strong> You have the right to delete your account and personal data at any time via the in-app <strong>Delete Account</strong> button or by emailing us.
+5. <strong>Right to Withdraw Consent:</strong> Where we rely on your consent to process your data (including your explicit consent for processing health, fertility, pregnancy, and infant logs), you have the right to withdraw that consent at any time.
+6. <strong>Right to Restrict or Object to Processing:</strong> You have the right to ask us to restrict or stop processing your personal data in certain circumstances. Because the core function of Maternity Hub is processing the logs you enter to display your tracker and statistics, restricting or stopping the processing of your health logs may require pausing your use of the App or deleting your account. You may also opt out of non-essential communications or push notifications at any time via your device settings.</p>
+<p><strong>How to Submit a Request &amp; Verification:</strong><br />
+To exercise any of these rights, please email <strong>support@intervadasolutions.com</strong> with the subject line <em>"Privacy Rights Request"</em>. To protect your sensitive data from unauthorized disclosure, we will verify your identity by confirming that the request originates from the email address registered to your account. We respond to all verified requests free of charge within <strong>thirty (30) days</strong> (or shorter where mandated by local law).</p>
+<hr />
+<h2>9. Jurisdiction-Specific Privacy Disclosures</h2>
+<h3>9.1. European Economic Area (EEA), United Kingdom (UK), and Switzerland</h3>
+<p>If you reside in the EEA, the UK, or Switzerland, Intervada Solutions LLC acts as the "Data Controller" of your personal data under the EU GDPR, the UK GDPR, and the Swiss FADP. In addition to the rights listed in Section 8, you have the right to lodge a complaint with your local supervisory authority:
+* <strong>EEA Residents:</strong> Your national Data Protection Authority (a full list is available at https://edpb.europa.eu/about-edpb/board/members_en).
+* <strong>UK Residents:</strong> The Information Commissioner’s Office (ICO) at https://ico.org.uk.
+* <strong>Swiss Residents:</strong> The Federal Data Protection and Information Commissioner (FDPIC) at https://www.edoeb.admin.ch.</p>
+<h3>9.2. United States Residents (California, Washington, Nevada &amp; Other States)</h3>
+<h4>A. California Residents (CCPA / CPRA &amp; Shine the Light)</h4>
+<p>Under the California Consumer Privacy Act, as amended by the CPRA (Cal. Civ. Code § 1798.100 et seq.):
+* <strong>Categories of Personal Information Collected:</strong> In the preceding 12 months, we have collected only the categories of information described in Section 2: Identifiers (email, optional name), Sensitive Personal Information (user-logged health, cycle, pregnancy, and infant care data), Commercial/Subscription status (App Store entitlement status), and Internet/Device technical activity (crash diagnostics and time zone).
+* <strong>No Sale or Sharing for Behavioral Advertising:</strong> <strong>Intervada Solutions LLC does not "sell" or "share" (as defined under the CCPA/CPRA for cross-context behavioral advertising) your Personal Information or Sensitive Personal Information</strong>, and has not done so in the past 12 months.
+* <strong>Limitation on Use of Sensitive Personal Information:</strong> We collect and use Sensitive Personal Information solely to perform the tracking and informational Services reasonably expected and requested by you, and to ensure the security and integrity of the Services (pursuant to Cal. Civ. Code § 1798.121). We never use Sensitive Personal Information to infer characteristics about you for advertising.
+* <strong>Non-Discrimination:</strong> We will never discriminate against you, deny services, or charge different prices for exercising your CCPA rights.
+* <strong>California "Shine the Light" Law (Cal. Civ. Code § 1798.83):</strong> We do not disclose personal information to third parties for their direct marketing purposes.</p>
+<h4>B. Washington State (My Health My Data Act) &amp; Nevada (NRS Chapter 603A) Consumer Health Data Notice</h4>
+<p>For residents of Washington State, Nevada, and other U.S. states with consumer health privacy statutes (such as Connecticut, Virginia, Colorado, Texas, and Oregon):
+1. <strong>Categories of Consumer Health Data Collected:</strong> We collect only the reproductive, maternal, and infant health metrics you voluntarily log in the App, as itemized in Section 2.2.
+2. <strong>Purpose of Collection &amp; Use:</strong> We process Consumer Health Data strictly to provide the cycle calculations, pregnancy tracking, sleep scheduling, nutrition/allergen logging, and milestone features you request.
+3. <strong>Sources of Consumer Health Data:</strong> Collected 100% directly from you when you enter logs into the App.
+4. <strong>Categories of Third Parties &amp; Processors:</strong> <strong>We never sell Consumer Health Data and never share it with third-party advertisers or data brokers.</strong> Consumer Health Data is only transmitted in encrypted form to our essential cloud hosting processor (Supabase, Inc.) and, if you explicitly enable Family Sharing, to your invited partner.
+5. <strong>How to Exercise Your Consumer Health Data Rights:</strong> You may (i) confirm whether we collect or share your Consumer Health Data; (ii) withdraw your consent to our collection and processing of your Consumer Health Data at any time; and (iii) request permanent deletion of your Consumer Health Data via <strong>Settings &gt; Delete Account</strong> in the App or by emailing <strong>support@intervadasolutions.com</strong>. If your request is denied, you may appeal our decision by emailing <strong>contact@intervadasolutions.com</strong> with the subject <em>"Privacy Appeal"</em>, and we will respond in writing within forty-five (45) days.</p>
+<h3>9.3. Canada Residents (PIPEDA &amp; Provincial Privacy Laws)</h3>
+<p>If you reside in Canada (including Quebec under Law 25), we collect, use, and disclose your personal information only with your meaningful consent for the purposes identified in this Policy. Your personal information is stored on encrypted cloud servers located in the United States and may be accessible to U.S. courts, law enforcement, or national security authorities under applicable U.S. law. You have the right to access, rectify, or withdraw consent for the processing of your personal information, and to de-index or delete your account by contacting our Privacy Officer at <strong>support@intervadasolutions.com</strong>. If you are unsatisfied with our response, you may contact the Office of the Privacy Commissioner of Canada (https://www.priv.gc.ca).</p>
+<h3>9.4. Australia Residents (Privacy Act 1988 &amp; Australian Privacy Principles)</h3>
+<p>If you reside in Australia, we handle your personal information and "sensitive information" (including health information) in accordance with the Australian Privacy Principles ("APPs") under the <em>Privacy Act 1988</em> (Cth). We only collect sensitive health information with your express consent when you voluntarily log it into the App, and we never use or disclose it for direct marketing. Your data is stored on secure cloud servers in the United States (see Section 10). You may access, correct, or delete your personal information, or submit an APP privacy complaint, by emailing <strong>support@intervadasolutions.com</strong>. We will respond to any privacy complaint within thirty (30) days. If you are not satisfied with our resolution, you may contact the Office of the Australian Information Commissioner (OAIC) at https://www.oaic.gov.au.</p>
+<hr />
+<h2>10. International Data Transfers</h2>
+<p>Intervada Solutions LLC is headquartered in the State of Wyoming, United States. When you use the Services from outside the United States—including from the EEA, the United Kingdom, Switzerland, Canada, Australia, or other regions—your personal data is transferred to, stored, and processed on secure cloud servers located in the United States and/or the European Union. </p>
+<p>Whenever we transfer personal data out of the EEA, the UK, or Switzerland to a jurisdiction not formally recognized as providing an equivalent level of data protection, we implement legally recognized transfer mechanisms, including the European Commission’s <strong>Standard Contractual Clauses (SCCs)</strong>, the UK International Data Transfer Addendum, and supplementary technical encryption measures (AES-256 at rest and TLS in transit) to ensure your data remains protected to GDPR standards.</p>
+<hr />
+<h2>11. Third-Party Links and Educational References</h2>
+<p>The App and Website may reference or contain links to external websites, pediatric organizations, or educational resources (such as Pathways.org, the American Academy of Pediatrics, or the World Health Organization). This Privacy Policy applies only to Services operated by Intervada Solutions LLC. We do not control and are not responsible for the privacy practices of external websites. We encourage you to read the privacy policies of any external website you visit.</p>
+<hr />
+<h2>12. Changes to This Privacy Policy</h2>
+<p>We review this Privacy Policy regularly and may update it from time to time to reflect new App features, operational adjustments, or changes in data protection laws. When we make material changes, we will notify you through an in-app notice or via email prior to the change becoming effective, and we will update the "Last Updated" date at the top of this policy.</p>
+<hr />
+<h2>13. Contact Us</h2>
+<p>If you have any questions, concerns, or requests regarding this Privacy Policy, your privacy rights, or how we handle your data, please contact us at:</p>
+<p><strong>Intervada Solutions LLC</strong><br />
+Attn: Privacy &amp; Data Protection<br />
+30 N Gould St, STE R<br />
+Sheridan, WY 82801, United States<br />
+<strong>D-U-N-S® Number:</strong> 149997352<br />
+<strong>General Email:</strong> contact@intervadasolutions.com<br />
+<strong>Support &amp; Privacy Requests:</strong> support@intervadasolutions.com<br />
+<strong>Website:</strong> https://intervadasolutions.com</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Intervada Solutions LLC</h4>
+        <p>Maternity Hub is developed and published by Intervada Solutions LLC, a Wyoming Limited Liability Company dedicated to thoughtful, privacy-first software for parents and families.</p>
+        <p><strong>Corporate Address:</strong><br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</p>
+        <p><strong>D-U-N-S® Number:</strong> 149997352</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal & Compliance</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms and Conditions of Use</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK GDPR Compliance</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact & Support</h5>
+        <ul>
+          <li><a href="mailto:contact@intervadasolutions.com">contact@intervadasolutions.com</a></li>
+          <li><a href="mailto:support@intervadasolutions.com">support@intervadasolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+      <div>Maternity Hub™ is a trademark of Intervada Solutions LLC.</div>
+    </div>
+  </footer>
+</body>
+</html>

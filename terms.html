@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions of Use | Maternity Hub &bull; Intervada Solutions LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5A7865;
+      --primary-light: #E8EFEA;
+      --accent: #E2C799;
+      --accent-soft: #F9F5EC;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 500;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 14px rgba(90, 120, 101, 0.35);
+    }
+    .btn-primary:hover {
+      background: #4A6354;
+    }
+    .legal-container {
+      max-width: 900px;
+      margin: 3rem auto 6rem;
+      padding: 3.5rem 3rem;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-container h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0F172A;
+      margin-bottom: 0.5rem;
+    }
+    .legal-container h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #1E293B;
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-container h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-container h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #475569;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-container p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+    }
+    .legal-container ul, .legal-container ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+    }
+    .legal-container li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-container hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    th {
+      background: #F8FAFC;
+      padding: 0.9rem 1rem;
+      font-weight: 700;
+      color: #1E293B;
+      border-bottom: 2px solid var(--border);
+    }
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: #334155;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .callout {
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 1.75rem 0;
+      border-left: 5px solid;
+    }
+    .callout-warning {
+      background: #FEF2F2;
+      border-color: #EF4444;
+      color: #991B1B;
+    }
+    .callout-warning .callout-title {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #B91C1C;
+      font-size: 1.05rem;
+    }
+    .callout-info {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1E40AF;
+    }
+    .callout-info .callout-title {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #1D4ED8;
+      font-size: 1.05rem;
+    }
+    footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 4rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+    .footer-brand h4 {
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+      max-width: 400px;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .footer-links h5 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 768px) {
+      .legal-container { padding: 2rem 1.25rem; margin: 1.5rem 0.75rem 4rem; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">M</div>
+        <div>
+          <div class="brand-name">Maternity Hub</div>
+          <span class="brand-tag">by Intervada Solutions LLC</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="privacy.html" class="">Privacy Policy</a></li>
+          <li><a href="terms.html" class="active">Terms of Service</a></li>
+          <li><a href="mailto:contact@intervadasolutions.com" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="legal-container">
+      <h1>TERMS AND CONDITIONS OF USE</h1>
+<p><strong>Effective Date:</strong> October 25, 2026<br />
+<strong>Last Updated:</strong> October 25, 2026</p>
+<h2>1. Introduction and Acceptance of Terms</h2>
+<p>1.1. Please read these Terms and Conditions of Use ("Terms" or "Agreement") carefully. This Agreement is a legally binding contract between you ("User," "you," or "your") and <strong>Intervada Solutions LLC</strong>, a limited liability company organized under the laws of the State of Wyoming, United States, with its registered office at 30 N Gould St, STE R, Sheridan, WY 82801, USA, and D-U-N-S® Number 149997352 ("Intervada Solutions," "Company," "we," "us," or "our").</p>
+<p>1.2. These Terms govern your download, installation, access to, and use of the <strong>Maternity Hub</strong> mobile application (the "App"), our website located at <strong>https://intervadasolutions.com</strong> (the "Website"), and all related features, calculators, trackers, audio soundscapes, statistics, guides, and services offered by the Company (collectively, the "Services").</p>
+<p>1.3. <strong>IMPORTANT ARBITRATION NOTICE:</strong> PLEASE CAREFULLY READ THE BINDING ARBITRATION CLAUSE AND CLASS ACTION WAIVER IN SECTION 13 OF THESE TERMS. EXCEPT WHERE PROHIBITED BY MANDATORY LOCAL CONSUMER LAW, IT AFFECTS HOW DISPUTES BETWEEN YOU AND THE COMPANY ARE RESOLVED AND INFORMS YOU OF YOUR 30-DAY OPT-OUT RIGHTS.</p>
+<p>1.4. By creating an account, downloading, installing, accessing, or using the Services, you affirm that you have read, understood, and agree to be bound by these Terms and our <strong>Privacy Policy</strong> (available at https://intervadasolutions.com/privacy.html), which is incorporated herein by reference. <strong>IF YOU DO NOT AGREE TO THESE TERMS, YOU MUST NOT ACCESS OR USE THE SERVICES.</strong></p>
+<hr />
+<h2>2. CRITICAL MEDICAL AND HEALTH DISCLAIMER (NO MEDICAL ADVICE)</h2>
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ MANDATORY MEDICAL NOTICE</div>
+  <p><strong>INTERVADA SOLUTIONS LLC IS NOT A LICENSED MEDICAL CARE PROVIDER, PHYSICIAN, OBSTETRICIAN-GYNECOLOGIST, PEDIATRICIAN, MIDWIFE, LACTATION CONSULTANT, OR NUTRITIONIST. THE APP IS NOT A MEDICAL, DIAGNOSTIC, CLINICAL, OR SCIENTIFIC DEVICE.</strong></p>
+  <p>All content, algorithmic calculations, cycle predictions, sleep schedules, statistics, food lists, allergen trackers, recipes, milestone checklists, activity ideas, and audio soundscapes provided in connection with the Services are strictly for <strong>general informational, educational, and personal routine-tracking purposes only</strong>. Nothing contained in the Services is intended to constitute, or should be construed as, the practice of medicine, medical advice, clinical diagnosis, treatment, or healthcare management.</p>
+  <p><strong>NEVER DISREGARD PROFESSIONAL MEDICAL ADVICE OR DELAY IN SEEKING IT BECAUSE OF SOMETHING YOU HAVE READ, LOGGED, OR CALCULATED IN THE APP.</strong> Always consult with a licensed physician, pediatrician, or other qualified healthcare provider before making any decisions or taking any actions that may affect your health and safety, your pregnancy, or the health, safety, nutrition, sleep, or development of your fetus, infant, or child. <strong>IF YOU THINK YOU OR YOUR CHILD MAY HAVE A MEDICAL EMERGENCY, CALL 911 (OR YOUR LOCAL EMERGENCY SERVICES NUMBER) OR GO TO THE NEAREST OPEN EMERGENCY ROOM IMMEDIATELY.</strong></p>
+</div>
+
+<h3>2.2. Chapter-Specific Medical and Safety Disclaimers</h3>
+<ol>
+<li><strong>Trying to Conceive (TTC) &amp; Cycle Stage Calculations:</strong><br />
+   The App utilizes user-logged data (such as period dates, basal body temperature, ovulation test results, cervical mucus, and symptoms) to estimate menstrual cycle stages, including menstruation, the follicular phase, the fertile window, and the luteal phase. <strong>THE APP IS NOT A CONTRACEPTIVE DEVICE AND MUST NEVER BE USED AS A METHOD OF BIRTH CONTROL OR CONTRACEPTION TO PREVENT PREGNANCY.</strong> Furthermore, the App cannot guarantee conception. Menstrual cycles and ovulation timing are subject to natural biological variability, stress, medications, and underlying medical conditions. Reliance on any cycle phase or fertile window prediction is solely at your own risk.</li>
+<li><strong>Pregnancy Tracking &amp; Information:</strong><br />
+   Week-by-week fetal developmental facts, fruit size comparisons, general pregnancy symptom overviews, maternal weight logs, hydration trackers, and fetal kick counters are provided solely for general educational reference. They are not a substitute for professional prenatal care, obstetrical ultrasounds, or clinical fetal monitoring. If you experience any concerning symptoms or notice any change or decrease in fetal movements, contact your obstetrician or midwife immediately.</li>
+<li><strong>Infant Sleep &amp; Daily Care Predictions:</strong><br />
+   The App’s calculations of expected naps, wake windows, bedtimes, and wake times are mathematical estimates derived from your historical logs, daily inputs, and general age-appropriate sleep norms. <strong>We do not provide medical accuracy or clinical sleep diagnostics.</strong> Every infant is unique. Never ignore your baby’s hunger cues, signs of illness, or pediatric safe-sleep guidelines (such as placing babies on their backs on a firm, flat, bare sleep surface) based on an app-generated schedule. Logs for baby temperature and baby medication are personal memory aids only; always verify medication dosages directly with your pediatrician or pharmacist.</li>
+<li><strong>Ambient Sleep Soundscapes &amp; Audio:</strong><br />
+   Our library of soothing noises, nature/travel sounds, bedtime lullabies, and playtime tracks is intended to support relaxation and daily routines. To protect infant hearing, always adhere to pediatric safety recommendations: keep your mobile phone or speaker at a safe distance (at least several feet/two meters away) from your baby’s crib or head, never place a device inside the crib, and keep the volume at a low, gentle level.</li>
+<li><strong>Infant Solids, Allergens, Recipes &amp; Choking Prevention:</strong><br />
+   The lists of solid foods, common allergens, and generic recipes provided in the App are generalized informational tools designed with typically developing infants in mind. Your child is an individual and may have underlying medical, anatomical, or developmental considerations (including, without limitation, prematurity, developmental delay, hypotonia, dysphagia, airway differences, gastrointestinal conditions, or severe allergies).  </li>
+<li><strong>Consult Your Healthcare Provider:</strong> Always consult your pediatrician or pediatric allergist before introducing solid foods or common allergens to your baby, and discuss an appropriate feeding plan.  </li>
+<li><strong>Assumption of Risk &amp; Supervision:</strong> By using the Solids features, you acknowledge that you accept sole responsibility for your child’s feeding safety. You must ensure all foods are prepared in an age- and developmentally-appropriate size, softness, and texture to minimize choking hazards, maintain continuous, within-arm’s-reach adult supervision whenever your child is eating, and seek immediate emergency medical care if your child exhibits signs of choking or an allergic reaction.</li>
+<li><strong>Infant Developmental Milestones (0–24 Months):</strong><br />
+   The Motor, Cognitive, Speech, and Social skill checklists and activity ideas in the App are general educational references inspired by publicly available pediatric guidance (such as Pathways.org and similar professional organizations). They are <strong>not</strong> clinical developmental screening or diagnostic instruments. Every child develops at their own pace. If you have any questions or concerns regarding your child’s physical, cognitive, speech, or social development, always consult your pediatrician.</li>
+</ol>
+<hr />
+<h2>3. Eligibility, Age Limitations, and Account Registration</h2>
+<p>3.1. <strong>Minimum Age:</strong> The Services are intended for adults. You must be at least <strong>18 years of age</strong> to download, register for, or use the App (or at least <strong>16 years of age</strong> for residents of the European Economic Area, the United Kingdom, Switzerland, and Canada, or at least <strong>13 years of age</strong> in the United States and Australia with the explicit permission and supervision of a parent or legal guardian). We do not knowingly allow anyone under 13 (or under 16 in the EEA, UK, Switzerland, and Canada) to use the Services.</p>
+<p>3.2. <strong>Account Accuracy and Security:</strong> To access the App’s features, you may be required to register an account ("Account"). You agree to provide accurate and current information and to keep your login credentials strictly confidential. You are solely responsible for all activity occurring under your Account. If you enable Partner or Family synchronization, you are solely responsible for controlling whom you authorize to view or contribute to your shared family logs. If you suspect any unauthorized access to your Account, you must notify us immediately at <strong>support@intervadasolutions.com</strong>.</p>
+<hr />
+<h2>4. Subscriptions, Global Sales, Billing, and Cancellations</h2>
+<p>4.1. <strong>Subscriptions and Global Availability:</strong> We may offer paid subscriptions ("Subscriptions") that provide access to premium features, tracking modules, statistics, and audio content across multiple countries worldwide. When you purchase a Subscription through a third-party platform operator—such as the <strong>Apple App Store</strong> or <strong>Google Play Store</strong> (each, an "App Store")—the respective App Store acts as the merchant of record and automatically displays prices in your local currency and calculates applicable local taxes (such as sales tax, VAT, or GST).</p>
+<p>4.2. <strong>Automatic Renewal:</strong> Subscriptions are billed in advance on a recurring basis (e.g., monthly or annually) as disclosed to you prior to purchase. <strong>Your Subscription will automatically renew at the end of each billing cycle at the then-current subscription price plus applicable taxes, unless you cancel your Subscription at least twenty-four (24) hours before the end of the current billing period.</strong></p>
+<p>4.3. <strong>Free Trials and Promotional Offers:</strong> Some Subscriptions may begin with a free trial period or a limited-time promotional rate ("Trial"). <strong>Trials automatically convert into a paid, recurring Subscription when the Trial period expires.</strong> To avoid being charged, you must cancel your Subscription through your App Store account settings at least twenty-four (24) hours before the Trial expires.</p>
+<p>4.4. <strong>How to Cancel &amp; App Store Billing Rules:</strong><br />
+<strong>DELETING THE APP FROM YOUR DEVICE DOES NOT CANCEL YOUR SUBSCRIPTION.</strong> Because all in-app purchases are processed directly by the App Store through which you downloaded the App:
+* Your billing relationship is directly with the Apple App Store or Google Play Store, not with Intervada Solutions LLC.
+* <strong>To Cancel on iOS (Apple):</strong> Open your iPhone/iPad <strong>Settings</strong> &gt; tap your <strong>Apple ID Name</strong> &gt; tap <strong>Subscriptions</strong> &gt; select <strong>Maternity Hub</strong> &gt; tap <strong>Cancel Subscription</strong>.
+* <strong>To Cancel on Android (Google Play):</strong> Open the <strong>Google Play Store</strong> app &gt; tap your <strong>Profile Icon</strong> &gt; tap <strong>Payments &amp; subscriptions</strong> &gt; <strong>Subscriptions</strong> &gt; select <strong>Maternity Hub</strong> &gt; tap <strong>Cancel subscription</strong>.
+* Upon cancellation, you will continue to have access to Subscription features through the end of your current paid billing period, and you will not be charged for subsequent periods.</p>
+<p>4.5. <strong>Refunds:</strong> Intervada Solutions LLC does not collect your payment card details and cannot directly process or issue refunds for Subscriptions purchased through an App Store. All refund requests must be submitted directly to the respective App Store in accordance with their refund policies (for Apple, visit https://reportaproblem.apple.com; for Google Play, visit Google Play Help). Where these Terms conflict with the mandatory billing or refund terms of the respective App Store, the App Store’s terms shall govern.</p>
+<p>4.6. <strong>Price Changes:</strong> We may modify Subscription pricing from time to time. Any price change will be communicated to you in advance via the relevant App Store and will take effect no earlier than the start of your next billing period following the notice. If you do not agree to a price change, you may cancel your Subscription before the new price takes effect.</p>
+<hr />
+<h2>5. Limited License and Acceptable Use</h2>
+<p>5.1. <strong>Limited License:</strong> Subject to your strict compliance with these Terms, Intervada Solutions LLC grants you a personal, worldwide, revocable, non-exclusive, non-transferable, and non-sublicensable license to download, install, and use the App on a compatible mobile device that you own or control, solely for your personal, non-commercial family use.</p>
+<p>5.2. <strong>Prohibited Conduct:</strong> As a condition of your use of the Services, you agree that you SHALL NOT:
+1. Resell, rent, lease, loan, sublicense, distribute, or commercially exploit the App or any part of the Services;
+2. Modify, adapt, translate, reverse engineer, decompile, disassemble, or attempt to derive the source code or underlying mathematical algorithms of the App (except to the limited extent such restriction is expressly prohibited by mandatory applicable law);
+3. Copy, download, rip, redistribute, or publicly perform any audio soundscapes, graphics, UI designs, or databases from the App outside of normal in-app playback;
+4. Use any robot, spider, scraper, or other automated means to extract, harvest, or index data or content from the Services;
+5. Use the App, its content, or its outputs to train, fine-tune, or develop any machine learning or artificial intelligence model, or to build a competitive product or service;
+6. Circumvent, disable, or interfere with any security-related features, authentication mechanisms, or row-level security controls of the Services;
+7. Use the App’s cycle or fertility predictions as a form of birth control/contraception, or use any feature of the App to diagnose, treat, or mitigate any medical condition; or
+8. Use the Services in any manner that violates any local, state, national, or international law.</p>
+<p>Any violation of this Section 5.2 shall immediately terminate your license to use the Services.</p>
+<hr />
+<h2>6. Intellectual Property Rights</h2>
+<p>6.1. <strong>Our Proprietary Software and Original Content:</strong> Except as set forth in Section 6.2 and Section 6.3 below, all rights, title, and interest in and to the App and Website—including our software source code, proprietary algorithms, user interface (UI) and user experience (UX) designs, custom graphics, illustrations, original text, compilation and arrangement of data, trademarks, service marks, logos, and trade dress (collectively, "Company Content")—are owned exclusively by <strong>Intervada Solutions LLC</strong> and are protected by United States and international copyright, trademark, and intellectual property laws. All rights not expressly granted in these Terms are reserved by Intervada Solutions LLC.</p>
+<p>6.2. <strong>Third-Party Licensed Media and Educational References:</strong><br />
+<em> </em><em>Audio Soundscapes &amp; Media Assets:</em><em> Certain ambient sounds, music tracks, and media assets within the App are provided under valid license from third-party creators and platforms (including royalty-free licenses such as the Pixabay Content License). Intervada Solutions LLC claims ownership over the selection, curation, engineering, and software integration of the soundscape player, while the underlying third-party audio files remain subject to the rights and terms of their respective licensors. You may not extract, redistribute, or sell any audio files from the App.
+* </em><em>Recipes, Food Facts &amp; Developmental Milestones:</em>* General culinary recipes, nutritional facts, and age-based developmental milestone concepts are provided for educational reference and draw upon public pediatric literature and established organizations (such as Pathways.org). We do not claim exclusive copyright ownership over factual developmental milestones or generic culinary recipes, nor does any reference to a third-party organization imply its endorsement or sponsorship of our App.</p>
+<p>6.3. <strong>Your Logged Data ("User Content"):</strong> You retain all ownership rights to the personal logs, notes, and family data that you input into the App ("User Content"). By entering User Content into the App, you grant Intervada Solutions LLC a limited, non-exclusive, worldwide, royalty-free license solely to host, store, encrypt, back up, process, and display your User Content back to you (and to any partner or family member you explicitly authorize) for the purpose of providing and operating the Services in accordance with our Privacy Policy.</p>
+<p>6.4. <strong>Feedback:</strong> We welcome your feedback, comments, and suggestions for improving the Services ("Feedback"). Any Feedback you submit to us is provided on a non-confidential basis, and you grant Intervada Solutions LLC a perpetual, irrevocable, worldwide, royalty-free right to use and incorporate such Feedback into the Services without any obligation or compensation to you.</p>
+<hr />
+<h2>7. DMCA Copyright Notice and Takedown Procedures</h2>
+<p>In accordance with the Digital Millennium Copyright Act of 1998 ("DMCA"), 17 U.S.C. § 512, Intervada Solutions LLC respects the intellectual property rights of others and responds promptly to valid notices of alleged copyright infringement. If you believe that any material accessible on or through our Website or App infringes your copyright, you may request removal of those materials by submitting a written notification to our Designated Copyright Agent containing the following information:
+1. Identification of the copyrighted work that you claim has been infringed;
+2. Identification of the material that is claimed to be infringing and reasonably sufficient information to permit us to locate the material within the Website or App;
+3. Your full name, mailing address, telephone number, and email address;
+4. A statement that you have a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law;
+5. A statement that the information in the notification is accurate, and, <strong>under penalty of perjury</strong>, that you are the copyright owner or are authorized to act on behalf of the copyright owner; and
+6. A physical or electronic signature of the copyright owner or authorized representative.</p>
+<p><strong>Designated Copyright Agent:</strong><br />
+Intervada Solutions LLC — Legal &amp; Copyright Compliance<br />
+30 N Gould St, STE R, Sheridan, WY 82801, USA<br />
+Email: <strong>contact@intervadasolutions.com</strong></p>
+<hr />
+<h2>8. Apple App Store and Google Play Store Additional Terms</h2>
+<p>If you download or access the App via the Apple App Store or Google Play Store, you acknowledge and agree that:
+1. <strong>Contracting Parties:</strong> These Terms are concluded strictly between you and <strong>Intervada Solutions LLC</strong>, and not with Apple Inc. ("Apple") or Google LLC ("Google"). Intervada Solutions LLC, not Apple or Google, is solely responsible for the App and its content.
+2. <strong>Maintenance and Support:</strong> Neither Apple nor Google has any obligation whatsoever to furnish any maintenance and support services with respect to the App.
+3. <strong>Warranty:</strong> In the event of any failure of the App to conform to any applicable warranty not effectively disclaimed herein, you may notify Apple (or Google, as applicable), and Apple will refund the purchase price (if any) for the App to you. To the maximum extent permitted by applicable law, neither Apple nor Google will have any other warranty obligation whatsoever with respect to the App.
+4. <strong>Product Claims:</strong> Apple and Google are not responsible for addressing any claims by you or any third party relating to the App or your possession and/or use of the App, including, but not limited to: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, health, or privacy legislation.
+5. <strong>Intellectual Property Claims:</strong> In the event of any third-party claim that the App or your possession and use of the App infringes that third party’s intellectual property rights, Intervada Solutions LLC, not Apple or Google, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim to the extent required by these Terms.
+6. <strong>Third-Party Beneficiary:</strong> Apple and its subsidiaries, and Google and its subsidiaries, are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple and Google will each have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
+<hr />
+<h2>9. Third-Party Services and External Links</h2>
+<p>The Services may contain links or references to third-party websites, educational institutions, or resources ("Third-Party Services"). Intervada Solutions LLC does not control, endorse, or assume any responsibility for the content, accuracy, or privacy practices of any Third-Party Services. Your access to and use of any Third-Party Services is solely at your own risk.</p>
+<hr />
+<h2>10. Disclaimer of Warranties ("AS IS") &amp; Statutory Consumer Rights</h2>
+<p>10.1. <strong>General Disclaimer:</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICES AND ALL CONTENT, ALGORITHMS, PREDICTIONS, SCHEDULES, RECIPES, MILESTONE GUIDES, AND AUDIO SOUNDSCAPES ARE PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS, WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, CLINICAL OR BIOLOGICAL ACCURACY, AND RELIABILITY.</p>
+<p>NEITHER INTERVADA SOLUTIONS LLC NOR ITS OFFICERS, MEMBERS, MANAGERS, EMPLOYEES, OR LICENSORS WARRANT THAT: (A) THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE; (B) ANY DEFECTS OR ERRORS WILL BE CORRECTED; (C) THE APP OR SERVERS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS; OR (D) THE RESULTS OR PREDICTIONS OBTAINED FROM USING THE APP WILL MEET YOUR EXPECTATIONS OR REQUIREMENTS. YOUR USE OF THE SERVICES IS SOLELY AT YOUR OWN RISK.</p>
+<p>10.2. <strong>Preservation of Mandatory Statutory Consumer Guarantees (Australia, UK, EEA, Switzerland, and Canada):</strong><br />
+Some jurisdictions do not allow the exclusion of certain statutory warranties, conditions, or guarantees. Nothing in these Terms excludes, restricts, or modifies any consumer guarantee, right, or remedy conferred on you by mandatory applicable law—including the <strong>Australian Consumer Law (ACL)</strong> (Schedule 2 of the <em>Competition and Consumer Act 2010</em> (Cth)), the UK <em>Consumer Rights Act 2015</em>, European Union and Swiss consumer protection directives, or Canadian provincial consumer protection statutes—that cannot be lawfully excluded or limited by agreement. To the extent permitted by the Australian Consumer Law, where our liability for a failure to comply with a statutory consumer guarantee can be limited, our liability is limited (at our option) to the resupply of the Services or the payment of the cost of having the Services supplied again.</p>
+<hr />
+<h2>11. Limitation of Liability</h2>
+<p>11.1. <strong>Exclusion of Consequential Damages:</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL <strong>INTERVADA SOLUTIONS LLC</strong>, ITS MEMBERS, MANAGERS, OFFICERS, EMPLOYEES, AGENTS, AFFILIATES, LICENSORS, OR SERVICE PROVIDERS BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES OF ANY KIND—INCLUDING, WITHOUT LIMITATION, DAMAGES FOR PERSONAL INJURY, WRONGFUL DEATH, EMOTIONAL DISTRESS, UNINTENDED PREGNANCY, INABILITY TO CONCEIVE, PREGNANCY COMPLICATIONS, ALLERGIC REACTIONS, CHOKING INCIDENTS, DEVELOPMENTAL DELAYS, LOSS OF USE, LOSS OF DATA, OR LOSS OF PROFITS—WHETHER IN AN ACTION IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, EQUITY, OR OTHERWISE, ARISING OUT OF OR IN ANY WAY CONNECTED WITH YOUR USE OF, RELIANCE ON, OR INABILITY TO USE THE SERVICES OR ANY INFORMATION PROVIDED THEREIN, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+<p>11.2. <strong>Liability Cap:</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL THE TOTAL AGGREGATE LIABILITY OF INTERVADA SOLUTIONS LLC ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR FROM THE USE OF OR INABILITY TO USE THE SERVICES EXCEED THE GREATER OF: (A) THE TOTAL AMOUNTS YOU HAVE PAID FOR USE OF THE APP DURING THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM; OR (B) <strong>ONE HUNDRED U.S. DOLLARS ($100.00 USD)</strong>.</p>
+<p>11.3. <strong>Jurisdictional Exceptions:</strong> THE LAWS OF SOME STATES AND COUNTRIES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CERTAIN DAMAGES (SUCH AS LIABILITY FOR DEATH OR PERSONAL INJURY CAUSED BY GROSS NEGLIGENCE OR FRAUD). NOTHING IN THIS AGREEMENT EXCLUDES OR LIMITS OUR LIABILITY TO YOU WHERE IT WOULD BE UNLAWFUL TO DO SO. WHERE ANY PROVISION IS EXPRESSED TO EXCLUDE OR LIMIT LIABILITY TO A GREATER EXTENT THAN PERMITTED BY APPLICABLE LAW, THAT PROVISION SHALL BE DEEMED TO ONLY EXCLUDE OR LIMIT OUR LIABILITY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.</p>
+<p>11.4. <strong>California Civil Code Section 1542 Waiver:</strong> To the fullest extent permitted by law, if you are a California resident, you waive California Civil Code Section 1542, which states: <em>"A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</em> Residents of other jurisdictions waive any comparable statute or doctrine.</p>
+<hr />
+<h2>12. Indemnification</h2>
+<p>To the maximum extent permitted by applicable law, you agree to defend, indemnify, and hold harmless <strong>Intervada Solutions LLC</strong>, its members, managers, officers, employees, agents, licensors, and service providers from and against any and all third-party claims, actions, demands, liabilities, damages, losses, settlements, costs, and expenses (including reasonable attorneys’ fees) arising out of or resulting from: (a) your use or misuse of the Services; (b) your violation of any provision of these Terms; (c) your User Content; or (d) your violation of any applicable law or the rights of any third party.</p>
+<hr />
+<h2>13. Dispute Resolution, Binding Individual Arbitration, and Class Action Waiver</h2>
+<div class="callout callout-info">
+  <div class="callout-title">⚖️ ARBITRATION & CLASS ACTION WAIVER NOTICE</div>
+  <p><strong>PLEASE READ THIS SECTION CAREFULLY BECAUSE IT REQUIRES YOU TO ARBITRATE CERTAIN DISPUTES AND CLAIMS WITH US ON AN INDIVIDUAL BASIS AND LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF FROM US.</strong></p>
+</div>
+
+<p>13.1. <strong>European Union, UK, Swiss, and Australian Consumer Carve-Out:</strong> If you are a consumer habitually residing in a member state of the European Economic Area (EEA), the United Kingdom, Switzerland, Norway, Iceland, or Australia, where mandatory local consumer protection laws prohibit pre-dispute binding arbitration agreements or class action waivers, the mandatory arbitration provisions of this Section 13 shall not apply to you to the extent prohibited by your local law, and you may bring proceedings in the courts of your usual place of residence in accordance with the laws of your residence.</p>
+<p>13.2. <strong>Mandatory Informal Settlement Notice (30-Day Pre-Arbitration Process):</strong> Before either party may initiate arbitration or a court proceeding, you and the Company agree to first send a written notice of the dispute to the other party ("Notice of Dispute") and attempt in good faith to negotiate an informal resolution for at least <strong>thirty (30) days</strong>.<br />
+<em> You must send your Notice of Dispute by email to </em><em>contact@intervadasolutions.com</em><em> and by mail to: </em><em>Intervada Solutions LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA</em><em>.<br />
+</em> Your Notice of Dispute must include: (a) your full name and the email address associated with your Account; (b) a detailed description of the nature and basis of the claim or dispute; (c) the specific relief sought; and (d) your personal signature.<br />
+* If the dispute is not resolved within thirty (30) days after receipt of a complete Notice of Dispute, either party may proceed to formal dispute resolution as set forth below.</p>
+<p>13.3. <strong>Binding Individual Arbitration:</strong> To the fullest extent permitted by applicable law, and except for qualifying small claims court actions (Section 13.4) or actions seeking injunctive relief for intellectual property infringement, you and Intervada Solutions LLC agree that any dispute, claim, or controversy arising out of or relating in any way to these Terms, our Privacy Policy, or your use of the Services (collectively, "Disputes") shall be resolved exclusively by <strong>binding individual arbitration</strong> administered by the <strong>American Arbitration Association ("AAA")</strong> under its <strong>Consumer Arbitration Rules</strong> ("AAA Rules") then in effect, except as modified by this Agreement. The AAA Rules and filing forms are available online at https://www.adr.org. This arbitration agreement is governed by the U.S. Federal Arbitration Act ("FAA"), 9 U.S.C. § 1 et seq.</p>
+<p>13.4. <strong>Small Claims Court Option:</strong> As an alternative to arbitration, either you or Intervada Solutions LLC may bring an individual action in a small claims court of competent jurisdiction in the county of your residence or in Sheridan County, Wyoming, provided the claim qualifies for small claims court and remains in that court on an individual basis.</p>
+<p>13.5. <strong>Conduct of Arbitration &amp; Remote Hearings:</strong> To make arbitration convenient and cost-effective, regardless of the formal seat of arbitration (Sheridan County, Wyoming, or your state of residence), the Company agrees that any arbitration hearing may be conducted, at your election, <strong>by telephone, video conference, or solely on the submission of written documents</strong>, without requiring in-person travel.</p>
+<p>13.6. <strong>Arbitration Fees and Costs:</strong> Payment of all filing, administration, and arbitrator fees will be governed by the AAA Consumer Arbitration Rules. The arbitrator may award relief (including declaratory or injunctive relief) only on an individual basis and only to the extent necessary to provide relief warranted by the claimant’s individual claim.</p>
+<p>13.7. <strong>NO CLASS OR REPRESENTATIVE ACTIONS (CLASS ACTION WAIVER):</strong><br />
+<strong>TO THE FULLEST EXTENT PERMITTED UNDER APPLICABLE LAW, YOU AND INTERVADA SOLUTIONS LLC AGREE THAT EACH MAY BRING DISPUTES AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, MASS, OR REPRESENTATIVE PROCEEDING.</strong> Unless both you and the Company agree in writing, the arbitrator may not consolidate more than one person’s claims and may not otherwise preside over any form of a representative or class proceeding.</p>
+<p>13.8. <strong>WAIVER OF JURY TRIAL:</strong><br />
+<strong>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IF FOR ANY REASON A DISPUTE PROCEEDS IN COURT RATHER THAN IN ARBITRATION, YOU AND INTERVADA SOLUTIONS LLC UNCONDITIONALLY WAIVE ANY RIGHT TO A JURY TRIAL.</strong></p>
+<p>13.9. <strong>30-Day Right to Opt Out of Arbitration:</strong> You have the right to opt out of and decline this agreement to arbitrate by sending a written notice to <strong>contact@intervadasolutions.com</strong> (or by mail to Intervada Solutions LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA) within <strong>thirty (30) days</strong> of the date you first accept these Terms. Your opt-out notice must include your full name, the email address associated with your Account, and a clear statement that you decline this arbitration agreement. Opting out of arbitration will not affect any other provision of these Terms.</p>
+<p>13.10. <strong>One-Year Time Limitation on Claims:</strong> To the fullest extent permitted by applicable law, any Dispute or claim arising out of or related to the Services or these Terms must be commenced within <strong>one (1) year</strong> after the cause of action accrues (tolled during the 30-day informal resolution period in Section 13.2); otherwise, such Dispute or cause of action is permanently barred.</p>
+<hr />
+<h2>14. Governing Law and Venue</h2>
+<p>14.1. Except as provided in Section 13.1 for consumers in jurisdictions with mandatory local law rules, these Terms and any Dispute arising out of or relating to the Services shall be governed by and construed in accordance with the laws of the <strong>State of Wyoming, United States of America</strong>, without regard to its conflict of law provisions.</p>
+<p>14.2. To the extent any Dispute is permitted to be brought in a court of law rather than arbitration (other than small claims court), you and Intervada Solutions LLC agree to submit to the exclusive personal jurisdiction and venue of the state and federal courts located in <strong>Sheridan County, Wyoming, USA</strong>.</p>
+<hr />
+<h2>15. Export and Economic Sanctions Control</h2>
+<p>The software that supports the App may be subject to U.S. export and re-export control laws and regulations, including the Export Administration Regulations ("EAR") maintained by the U.S. Department of Commerce and trade and economic sanctions maintained by the U.S. Treasury Department’s Office of Foreign Assets Control ("OFAC"). You represent and warrant that you are: (1) not located in any country or region that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as a "terrorist supporting" country; and (2) not a denied or restricted party listed on any U.S. Government list of prohibited or restricted parties.</p>
+<hr />
+<h2>16. Maintenance, Updates, and Termination</h2>
+<p>16.1. <strong>Updates and Modifications to the App:</strong> We may from time to time update, improve, modify, or discontinue certain features or content of the App without liability to you. By using the App, you consent to receive automatic software updates delivered via your App Store.</p>
+<p>16.2. <strong>Changes to These Terms:</strong> We may revise these Terms from time to time for legal, regulatory, or operational reasons. If we make material changes, we will post the updated Terms on our Website and notify you via the App or email at least thirty (30) days before the changes take effect (unless immediate changes are required by law or security needs). Your continued use of the Services after the effective date of the updated Terms constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must stop using the Services and cancel any active Subscription.</p>
+<p>16.3. <strong>Termination:</strong> You may terminate this Agreement at any time by deleting your Account in the App and ceasing use of the Services. We reserve the right to suspend or terminate your Account and access to the Services if you materially breach these Terms. Upon termination, all provisions of these Terms that by their nature should survive termination—including Section 2 (Medical Disclaimer), Section 6 (Intellectual Property), Section 10 (Warranty Disclaimer), Section 11 (Limitation of Liability), Section 12 (Indemnification), and Section 13 (Arbitration)—shall survive.</p>
+<hr />
+<h2>17. General Provisions</h2>
+<p>17.1. <strong>Severability:</strong> If any provision of these Terms is held by an arbitrator or court of competent jurisdiction to be invalid, illegal, or unenforceable, that provision shall be enforced to the maximum extent permissible so as to effect the intent of the parties, and the remaining provisions of these Terms shall remain in full force and effect.</p>
+<p>17.2. <strong>No Waiver:</strong> No waiver by Intervada Solutions LLC of any term or condition set forth in these Terms shall be deemed a further or continuing waiver of such term or condition, and any failure to assert a right under these Terms shall not constitute a waiver of such right.</p>
+<p>17.3. <strong>Assignment:</strong> You may not assign or transfer your rights or obligations under these Terms without our prior written consent. Intervada Solutions LLC may freely assign or transfer its rights and obligations under these Terms to an affiliate or in connection with a merger, acquisition, corporate reorganization, or sale of assets.</p>
+<p>17.4. <strong>Controlling Language:</strong> The original English version of these Terms and our Privacy Policy is the sole legally binding version. Any translation into another language is provided strictly for convenience.</p>
+<p>17.5. <strong>California Consumer Notice:</strong> Under California Civil Code Section 1789.3, California users are entitled to the following consumer rights notice: If you have a question or complaint regarding the Services, please contact us at <strong>support@intervadasolutions.com</strong> or write to Intervada Solutions LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA. California residents may also reach the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by mail at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by telephone at (916) 445-1254 or (800) 952-5210.</p>
+<p>17.6. <strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy, constitute the entire, complete, and exclusive agreement between you and Intervada Solutions LLC regarding the Services and supersede all prior agreements or understandings.</p>
+<hr />
+<h2>18. Questions, Support, and Contact Information</h2>
+<p>If you have any questions, comments, or support requests regarding these Terms or the App, please contact us at:</p>
+<p><strong>Intervada Solutions LLC</strong><br />
+30 N Gould St, STE R<br />
+Sheridan, WY 82801, United States<br />
+<strong>D-U-N-S® Number:</strong> 149997352<br />
+<strong>General &amp; Legal Inquiries:</strong> contact@intervadasolutions.com<br />
+<strong>Customer Support:</strong> support@intervadasolutions.com<br />
+<strong>Website:</strong> https://intervadasolutions.com</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Intervada Solutions LLC</h4>
+        <p>Maternity Hub is developed and published by Intervada Solutions LLC, a Wyoming Limited Liability Company dedicated to thoughtful, privacy-first software for parents and families.</p>
+        <p><strong>Corporate Address:</strong><br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</p>
+        <p><strong>D-U-N-S® Number:</strong> 149997352</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal & Compliance</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms and Conditions of Use</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK GDPR Compliance</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact & Support</h5>
+        <ul>
+          <li><a href="mailto:contact@intervadasolutions.com">contact@intervadasolutions.com</a></li>
+          <li><a href="mailto:support@intervadasolutions.com">support@intervadasolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+      <div>Maternity Hub™ is a trademark of Intervada Solutions LLC.</div>
+    </div>
+  </footer>
+</body>
+</html>
