@@ -397,7 +397,7 @@
     const form = document.getElementById('supportForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = document.getElementById('btnText');
-    const statusBanner = document.getElementById('statusBanner');
+    const statusBanner = document.getElementById('supportForm').querySelector('#statusBanner');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -414,7 +414,7 @@
         website_hp: form.website_hp.value
       };
 
-    try {
+      try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -424,13 +424,20 @@
         const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
-          statusBanner.textContent = 'Thank you! Your message has been sent to our support team.';
+          statusBanner.textContent = '✓ Message sent! Thank you for reaching out—we will get back to you shortly.';
           statusBanner.className = 'status-banner status-success';
+          statusBanner.style.display = 'block';
           form.reset();
         } else {
           throw new Error(data.error || `HTTP ${response.status}`);
         }
       } catch (err) {
-        statusBanner.innerHTML = `Error (${err.message}). Please email us directly at <strong>support@thehazel.app</strong>.`;
+        statusBanner.innerHTML = `Could not send (${err.message}). Please email us directly at <strong>support@thehazel.app</strong>.`;
         statusBanner.className = 'status-banner status-error';
+        statusBanner.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Message';
       }
+    });
+  </script>
