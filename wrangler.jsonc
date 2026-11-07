@@ -1,0 +1,9 @@
+{
+  "name": "hazel-website",
+  "compatibility_date": "2026-11-07",
+  "main": "worker.js",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  }
+}
