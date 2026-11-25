@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazel | Fertility, Pregnancy &amp; Baby Care</title>
+  <!-- FAVICON PLACEHOLDER: Upload your square icon to assets/favicon.png -->
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Hazel Lavender Theme Palette */
+      --primary: #9D8EC9;
+      --primary-dark: #6F5FA3;
+      --primary-deep: #564787;
+      --primary-light: #EFEBF9;
+      --accent: #D8CEF0;
+      --accent-soft: #F5F2FC;
+      --input-bg: #F3EFFB;
+      --input-border: #DFD7F2;
+      --text-main: #2D283E;
+      --text-body: #3F3954;
+      --text-muted: #6E6785;
+      --bg: #F9F8FD;
+      --surface: #FFFFFF;
+      --border: #E8E2F4;
+      --footer-bg: #1E1A2B;
+      --footer-border: #322C46;
+      --footer-heading: #EFEBF9;
+      --footer-text: #A8A0C2;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(45, 40, 62, 0.04);
+      --shadow-md: 0 12px 28px -6px rgba(111, 95, 163, 0.16), 0 8px 12px -6px rgba(45, 40, 62, 0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: rgba(249, 248, 253, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.05rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    /* Logo Placeholder Container: drop your logo at assets/hazel-logo.png */
+    .brand-logo-slot {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #9D8EC9 0%, #D8CEF0 100%);
+      border: 1.5px dashed rgba(111, 95, 163, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 3px 10px rgba(157, 142, 201, 0.22);
+    }
+    .brand-logo-slot.has-image {
+      border: none;
+      background: transparent;
+    }
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-logo-fallback {
+      display: none;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      user-select: none;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary-dark);
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 3.5rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--footer-border);
+    }
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand h4 {
+      color: var(--footer-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .footer-brand p {
+      max-width: 390px;
+      line-height: 1.58;
+    }
+    .footer-links h5 {
+      color: var(--footer-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.55rem;
+    }
+    .footer-links a {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 1.75rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.82rem;
+    }
+    .hero {
+      padding: 5rem 1.5rem 3.5rem;
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.42rem 1.05rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: 1px solid var(--accent);
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: clamp(2.35rem, 4.8vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 1.25rem;
+    }
+    .hero-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-body);
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+    .features-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      background: var(--primary-light);
+      border: 1px solid rgba(157, 142, 201, 0.25);
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
+      color: var(--text-main);
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card ul {
+      list-style: none;
+      padding-top: 0.6rem;
+      border-top: 1px dashed var(--border);
+    }
+    .feature-card li {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .feature-card li::before {
+      content: "•";
+      color: var(--primary-dark);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .values-banner {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 1.5rem;
+    }
+    .values-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      text-align: left;
+    }
+    .value-item h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    .value-item p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 0.85rem; }
+      nav ul { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="Hazel Home">
+        <!-- LOGO PLACEHOLDER: Upload your logo to assets/hazel-logo.png (or replace src below).
+             Until uploaded, the clean Lavender "LOGO" badge displays automatically. -->
+        <div class="brand-logo-slot has-image">
+          <img
+            src="assets/hazel-logo.png"
+            alt="Hazel Logo"
+            class="brand-logo-img"
+            onerror="this.style.display='none'; this.parentElement.classList.remove('has-image'); this.nextElementSibling.style.display='inline';"
+          >
+          <span class="brand-logo-fallback">LOGO</span>
+        </div>
+        <div class="brand-name">Hazel</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Overview</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">From Conception to Toddlerhood</div>
+      <h1>One Calm Companion for Every Chapter of Parenthood</h1>
+      <p>Hazel brings cycle intelligence, week-by-week pregnancy guidance, 24-hour circadian baby sleep dials, 100 first solids, and real-time family synchronization together in one private, ad-free space.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">1 Membership = Up to 8 Family Caregivers</span>
+        <span class="hero-pill">iOS &amp; Android Real-Time Sync</span>
+        <span class="hero-pill">Zero Health-Data Selling</span>
+      </div>
+    </section>
+
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌸</div>
+        <h3>1. Trying to Conceive (TTC)</h3>
+        <p>Adaptive cycle tracking and ovulation insights calibrated to both regular and irregular rhythms.</p>
+        <ul>
+          <li>Menstrual cycle &amp; historical period calibration</li>
+          <li>Basal Body Temperature (BBT), LH &amp; Cervical Mucus</li>
+          <li>Fertile window &amp; ovulation predictions</li>
+          <li>PCOS, thyroid &amp; clinical context support</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h3>2. Pregnancy Care</h3>
+        <p>Week-by-week fetal growth updates, gentle daily stories, and reassuring maternal wellness logs.</p>
+        <ul>
+          <li>Due Date, LMP, and Day 3 / Day 5 IVF dating</li>
+          <li>Weekly fetal development &amp; size comparisons</li>
+          <li>Fetal kick counter &amp; symptom tracking</li>
+          <li>Daily hydration, rest, and prenatal supplement logs</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌙</div>
+        <h3>3. Circadian Sleep &amp; Daily Care</h3>
+        <p>Visual 24-hour sleep dials and smart wake windows tailored to your baby's evolving rhythm.</p>
+        <ul>
+          <li>Adaptive wake windows (with premature adjusted-age support)</li>
+          <li>One-handed nursing, bottle feeding &amp; pumping timers</li>
+          <li>Diaper tracking, bath routines &amp; pediatric drops</li>
+          <li>Built-in background sleep soundscapes &amp; lullabies</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🥑</div>
+        <h3>4. 100 First Solids &amp; Allergens</h3>
+        <p>Guided introduction to solid foods, Big 9 allergen safety ladders, and nutritious food pairings.</p>
+        <ul>
+          <li>Interactive 100 First Solids progress dial</li>
+          <li>Big 9 Allergen step-by-step reaction monitor</li>
+          <li>Bioavailable iron &amp; brain-boosting pairings</li>
+          <li>Age-appropriate puree &amp; baby-led weaning notes</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧸</div>
+        <h3>5. Milestones &amp; Play</h3>
+        <p>Follow your baby's motor, cognitive, speech, and social growth from birth through 24 months.</p>
+        <ul>
+          <li>Stage-by-stage milestones (0 to 24 months)</li>
+          <li>Motor, cognitive, speech &amp; social checklists</li>
+          <li>Gentle daily tummy-time &amp; sensory play ideas</li>
+          <li>Grounded in established pediatric guidance</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">👨‍👩‍👧</div>
+        <h3>6. Shared Family Circle (Up to 8)</h3>
+        <p>One Hazel Pro subscription covers the primary account owner plus up to 7 invited family caregivers.</p>
+        <ul>
+          <li>Instant 6-character code for partner, grandparents &amp; nanny</li>
+          <li>Real-time cross-platform sync across iOS &amp; Android</li>
+          <li>5 calming themes: Lavender, Daylight, Nightfall, Blossom &amp; Sky</li>
+          <li>100% ad-free experience built for 3 AM check-ins</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="values-banner">
+      <div class="values-container">
+        <div class="value-item">
+          <h4>✨ Visual 24-Hour Dials</h4>
+          <p>See your baby's wake windows, 100 first solids, and daily rhythms at a single glance without digging through cluttered spreadsheets.</p>
+        </div>
+        <div class="value-item">
+          <h4>🔒 Private by Architecture</h4>
+          <p>Protected by AES-256 encryption and strict family-circle isolation. Your reproductive, pregnancy, and baby logs are never sold or shared with advertisers.</p>
+        </div>
+        <div class="value-item">
+          <h4>🤝 One Plan for the Whole Village</h4>
+          <p>Whether you're logging a 3 AM feeding or checking off a first food, up to 8 trusted caregivers stay effortlessly in sync under a single family plan.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <!-- FOOTER LOGO PLACEHOLDER: Uses the same assets/hazel-logo.png path -->
+          <div class="brand-logo-slot has-image" style="width: 34px; height: 34px; border-radius: 10px;">
+            <img
+              src="assets/hazel-logo.png"
+              alt="Hazel Logo"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; this.parentElement.classList.remove('has-image'); this.nextElementSibling.style.display='inline';"
+            >
+            <span class="brand-logo-fallback" style="font-size: 0.6rem;">LOGO</span>
+          </div>
+          <h4>Hazel</h4>
+        </div>
+        <p>A calm, unified companion supporting growing families from fertility and pregnancy through baby sleep, first foods, and early milestones.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK / Swiss GDPR</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="contact.html">Contact Support</a></li>
+          <li><a href="privacy.html#account-deletion">Account &amp; Data Deletion</a></li>
+          <li><a href="mailto:support@thehazel.app">support@thehazel.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+      <div>Privacy-first family tracking • Zero health-data ad sharing</div>
+    </div>
+  </footer>
+</body>
+</html>

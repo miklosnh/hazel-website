@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Hazel</title>
+  <!-- FAVICON PLACEHOLDER: Upload your square icon to assets/favicon.png -->
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Hazel Lavender Theme Palette */
+      --primary: #9D8EC9;
+      --primary-dark: #6F5FA3;
+      --primary-deep: #564787;
+      --primary-light: #EFEBF9;
+      --accent: #D8CEF0;
+      --accent-soft: #F5F2FC;
+      --input-bg: #F3EFFB;
+      --input-border: #DFD7F2;
+      --text-main: #2D283E;
+      --text-body: #3F3954;
+      --text-muted: #6E6785;
+      --bg: #F9F8FD;
+      --surface: #FFFFFF;
+      --border: #E8E2F4;
+      --footer-bg: #1E1A2B;
+      --footer-border: #322C46;
+      --footer-heading: #EFEBF9;
+      --footer-text: #A8A0C2;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(45, 40, 62, 0.04);
+      --shadow-md: 0 12px 28px -6px rgba(111, 95, 163, 0.16), 0 8px 12px -6px rgba(45, 40, 62, 0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: rgba(249, 248, 253, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.05rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    /* Logo Placeholder Container: drop your logo at assets/hazel-logo.png */
+    .brand-logo-slot {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #9D8EC9 0%, #D8CEF0 100%);
+      border: 1.5px dashed rgba(111, 95, 163, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 3px 10px rgba(157, 142, 201, 0.22);
+    }
+    .brand-logo-slot.has-image {
+      border: none;
+      background: transparent;
+    }
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-logo-fallback {
+      display: none;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      user-select: none;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary-dark);
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 3.5rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--footer-border);
+    }
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand h4 {
+      color: var(--footer-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .footer-brand p {
+      max-width: 390px;
+      line-height: 1.58;
+    }
+    .footer-links h5 {
+      color: var(--footer-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.55rem;
+    }
+    .footer-links a {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 1.75rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.82rem;
+    }
+    .legal-container {
+      max-width: 880px;
+      margin: 3rem auto 6rem;
+      padding: 3.5rem 3rem;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-container h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+    .legal-container h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-container h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-container h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-container p {
+      margin-bottom: 1.25rem;
+      color: var(--text-body);
+    }
+    .legal-container ul, .legal-container ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+    }
+    .legal-container li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-container a {
+      color: var(--primary-dark);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .legal-container hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    th {
+      background: var(--accent-soft);
+      padding: 0.9rem 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      border-bottom: 2px solid var(--border);
+    }
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-body);
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 0.85rem; }
+      nav ul { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+      .legal-container { padding: 2rem 1.25rem; margin: 1.5rem 0.75rem 4rem; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="Hazel Home">
+        <!-- LOGO PLACEHOLDER: Upload your logo to assets/hazel-logo.png (or replace src below).
+             Until uploaded, the clean Lavender "LOGO" badge displays automatically. -->
+        <div class="brand-logo-slot has-image">
+          <img
+            src="assets/hazel-logo.png"
+            alt="Hazel Logo"
+            class="brand-logo-img"
+            onerror="this.style.display='none'; this.parentElement.classList.remove('has-image'); this.nextElementSibling.style.display='inline';"
+          >
+          <span class="brand-logo-fallback">LOGO</span>
+        </div>
+        <div class="brand-name">Hazel</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="legal-container">
+      <h1>PRIVACY POLICY</h1>
+      <p><strong>Effective Date:</strong> November 7, 2026<br />
+      <strong>Last Updated:</strong> November 24, 2026</p>
+
+      <h2>1. Introduction and Who We Are</h2>
+      <p>Welcome to <strong>Hazel</strong> (the "App"). This Privacy Policy explains how <strong>Intervada Solutions LLC</strong>, a limited liability company registered in the State of Wyoming, United States ("Company," "we," "us," or "our"), collects, stores, uses, protects, and handles your personal data when you use our mobile application, our website located at <strong>https://thehazel.app</strong> (the "Website"), and all related features, content, and services (collectively, the "Services").</p>
+      <ul>
+        <li><strong>Data Controller / Legal Entity:</strong> Intervada Solutions LLC</li>
+        <li><strong>Registered Office Address:</strong> 30 N Gould St, STE R, Sheridan, WY 82801, United States</li>
+        <li><strong>Support &amp; Privacy Inquiries:</strong> <a href="mailto:support@thehazel.app">support@thehazel.app</a></li>
+      </ul>
+      <p>This Privacy Policy is designed to comply with global privacy standards, including the European Union General Data Protection Regulation ("EU GDPR"), the UK General Data Protection Regulation ("UK GDPR") and Data Protection Act 2018, the Swiss Federal Act on Data Protection ("FADP"), the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), the Washington My Health My Data Act ("MHMDA"), Nevada Revised Statutes Chapter 603A, Canada’s Personal Information Protection and Electronic Documents Act ("PIPEDA"), the Australian Privacy Principles ("APPs") under the Privacy Act 1988 (Cth), New Zealand’s Privacy Act 2020, and South Africa’s Protection of Personal Information Act ("POPIA").</p>
+      <p><strong>Our Core Privacy Promise:</strong><br />
+      Your body, your family, and your data belong to you. <strong>We do not sell, rent, trade, or give away your personal information or health data to third parties.</strong> We never use your fertility, cycle, pregnancy, or infant care logs for third-party advertising, behavioral profiling, or data brokerage. Your information is processed strictly to provide, synchronize, secure, and improve the Services you request.</p>
+
+      <hr />
+      <h2>2. Information We Collect</h2>
+      <p>We adhere to the principle of data minimization and collect only the information necessary to deliver the core functionality of the App across its Trying to Conceive (TTC), Pregnancy, and Infant Care chapters.</p>
+
+      <h3>2.1. Personal Information You Provide Directly</h3>
+      <ul>
+        <li><strong>Account &amp; Authentication Information:</strong> When you create an account using email/password, Sign in with Apple (including Apple’s Hide My Email relay if selected), or Google Sign-In, we collect your email address, encrypted authentication credentials or OAuth identity token, optional preferred name/nickname, caregiver role title (e.g., Mother, Father, Partner), illustrated avatar selection, visual theme preference, and time zone.</li>
+        <li><strong>Family Workspace Sharing Information (Up to 8 Members):</strong> If you create a Family Workspace or join an existing workspace using a 6-character Family Invite Code, we associate your authenticated User UUID with that shared workspace (supporting up to 1 Primary Owner + 7 invited family caregivers) so authorized members can view and log shared family routines.</li>
+        <li><strong>Customer Support Communications:</strong> When you contact us via <a href="contact.html">Contact Support</a> or at support@thehazel.app, we collect your email address, selected topic, and message contents solely to assist you.</li>
+      </ul>
+
+      <h3>2.2. Sensitive Health, Maternal, and Infant Care Data You Voluntarily Log</h3>
+      <p>Depending on which chapters and features of the App you choose to use, you may voluntarily enter health-related and developmental data ("Special Category Data" under the EU/UK GDPR and "Consumer Health Data" / "Sensitive Personal Information" under applicable U.S., Canadian, Australian, New Zealand, and Swiss laws):</p>
+      <ol>
+        <li><strong>Trying to Conceive (TTC) &amp; Cycle Tracking Data:</strong> Menstrual period start dates and durations, menstrual flow intensity, basal body temperature (BBT), cervical mucus observations, luteinizing hormone (LH) / ovulation test results, pregnancy test results, optional clinical context tags you select (such as PCOS, endometriosis, thyroid conditions, or irregular cycles), supplements/medications taken, physical symptoms, mood, and daily hydration intake.</li>
+        <li><strong>Pregnancy Data:</strong> Estimated due date (EDD), last menstrual period (LMP) or Day 3 / Day 5 IVF embryo transfer date, singleton/multiples indicator, maternal weight logs, fetal movement/kick counts, physical activity, rest and sleep logs, appetite, pregnancy symptoms, mood, hydration, and prenatal vitamins/medications taken.</li>
+        <li><strong>Infant Sleep &amp; Daily Care Data:</strong> Your child’s name or nickname, birth date, optional premature birth original due date (used solely to compute Adjusted Age wake windows), wake times, nap start and end times, bedtimes, night wakings, breastfeeding sessions (duration and side), bottle feeding volumes and contents, breast milk pumping logs, diaper changes (wet/soiled), baby body temperature, Vitamin D / medication logs, and bath routines.</li>
+        <li><strong>Infant Solids &amp; Nutrition Data:</strong> Solid foods introduced across food groups (vegetables, fruits, proteins, grains, dairy, healthy fats, legumes, seeds, herbs), water intake, exposure to Big 9 food allergens, observed skin or digestive sensitivities/reactions, and saved recipe preferences.</li>
+        <li><strong>Infant Developmental Milestones Data:</strong> Reached developmental milestones and parent notes across Motor skills, Cognitive skills, Speech skills, and Social skills from age 0 to 24 months.</li>
+      </ol>
+
+      <h3>2.3. Information Collected Automatically</h3>
+      <p>When you use the Services, we automatically collect limited technical and subscription metadata strictly required to maintain app functionality, billing entitlement verification, security, and local scheduling:</p>
+      <ul>
+        <li><strong>Subscription &amp; Entitlement Metadata:</strong> Pseudonymous App User UUID, active subscription plan status (`Hazel Pro Annual` or `Hazel Pro Monthly`), trial/renewal expiration dates, auto-renewal flag, and App Store / Google Play purchase tokens validated via RevenueCat. <strong>We never collect or store your credit card, debit card, Apple Pay, or Google Pay payment details.</strong></li>
+        <li><strong>Device &amp; Technical Data:</strong> Device model, operating system type and version, App version, device push notification token (if notifications are enabled), crash logs, and diagnostic performance data.</li>
+        <li><strong>Approximate Region &amp; Time Zone:</strong> Your device’s time zone offset and App Store country storefront to accurately calculate daily circadian routines, local 9:00 AM daily card reminders, and regional subscription pricing. <strong>We do not collect precise GPS location data.</strong></li>
+        <li><strong>In-App Audio &amp; Local Preferences:</strong> Your saved favorite sleep soundscapes, sleep timer durations, and active chapter view settings.</li>
+      </ul>
+
+      <hr />
+      <h2>3. How We Use Your Information and Lawful Bases</h2>
+      <p>We process your personal data only for specific, explicit, and legitimate purposes:</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Purpose of Processing</th>
+              <th>Categories of Data Used</th>
+              <th>Lawful Basis (EU/UK GDPR, Swiss FADP &amp; Global Equivalents)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Delivering Core App Features &amp; Algorithmic Calculations:</strong> Calculating cycle stages, weekly pregnancy progress, estimated baby nap/bedtime/wake windows (including premature adjusted age), personal statistics, solid food/allergen tracking, and milestone logging.</td>
+              <td>Account Data, TTC Data, Pregnancy Data, Infant Sleep, Solids &amp; Milestone Data</td>
+              <td><strong>Explicit Consent</strong> (GDPR Art. 6(1)(a) &amp; Art. 9(2)(a)) for health/special category data; <strong>Performance of a Contract</strong> (Art. 6(1)(b)) for core service delivery.</td>
+            </tr>
+            <tr>
+              <td><strong>Account Management, Cloud Backup &amp; Family Circle Sync:</strong> Authenticating your login, sending 8-digit recovery/verification codes, backing up logs across devices, and syncing real-time updates across up to 8 authorized members in your Family Workspace.</td>
+              <td>Account Data, Family Membership Role, Logged App Data</td>
+              <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) &amp; <strong>Explicit Consent</strong> (Art. 6(1)(a)).</td>
+            </tr>
+            <tr>
+              <td><strong>Subscriptions &amp; Family Entitlement Verification:</strong> Validating App Store / Google Play trials, renewals, grace periods, and cancellations via RevenueCat so your Family Workspace stays unlocked across authorized devices.</td>
+              <td>Pseudonymous User UUID, App Store / Play Store Purchase Receipts</td>
+              <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) &amp; <strong>Legal Obligation</strong> (Art. 6(1)(c)).</td>
+            </tr>
+            <tr>
+              <td><strong>Ambient Soundscapes &amp; Background Audio:</strong> Streaming soothing noises, nature/travel loops, bedtime lullabies, and playtime tracks, and storing your favorite tracks and timer settings.</td>
+              <td>Device Data, Local Preferences</td>
+              <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)).</td>
+            </tr>
+            <tr>
+              <td><strong>Push Notifications &amp; Routine Reminders:</strong> Sending local or remote push notifications for cycle reminders, baby routine schedules, or partner log updates that you opt to enable.</td>
+              <td>Account Data, Push Notification Token, Routine Timestamps</td>
+              <td><strong>Consent</strong> (Art. 6(1)(a)). You can disable notifications anytime in your device settings.</td>
+            </tr>
+            <tr>
+              <td><strong>Customer Support, Security &amp; Debugging:</strong> Responding to your inquiries, enforcing database Row-Level Security, preventing unauthorized access or fraud, and fixing technical bugs.</td>
+              <td>Account Data, Support Messages, Device &amp; Diagnostic Data</td>
+              <td><strong>Legitimate Interests</strong> (Art. 6(1)(f)) &amp; <strong>Legal Obligation</strong> (Art. 6(1)(c)).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Principles of Processing</h3>
+      <ul>
+        <li><strong>Purpose Limitation:</strong> Data collected for one purpose is never repurposed for incompatible uses without your explicit consent.</li>
+        <li><strong>No Automated Clinical Decision-Making:</strong> Our mathematical algorithms generate general calendar estimates and routine projections; we do not engage in automated decision-making that produces legal or clinical effects.</li>
+      </ul>
+
+      <hr />
+      <h2>4. Strict Policy Against Third-Party Data Sharing, Sale, and Advertising</h2>
+      <h3>4.1. No Sale or Rental of Personal or Health Data</h3>
+      <p><strong>We do not sell, rent, lease, trade, or give away your personal information or health data to any third party, data broker, advertising network, or analytics reseller.</strong> In strict compliance with Apple App Store Review Guidelines (Section 5.1) and Google Play Developer Policies, we never use reproductive, fertility, pregnancy, or infant health data for advertising, retargeting, or use-based data mining.</p>
+
+      <h3>4.2. External Promotional Campaigns and Creator Partnerships</h3>
+      <p>We may promote Hazel on external platforms (such as Instagram/Meta, TikTok, or Apple Search Ads) and collaborate with parenting creators. <strong>We never transmit any health logs, menstrual dates, pregnancy details, baby names, or caregiver notes to advertising platforms or creators.</strong></p>
+
+      <h3>4.3. Essential Service Providers (Sub-Processors)</h3>
+      <p>To host and operate the App securely, we rely on a strictly limited number of trusted infrastructure providers acting as our <strong>Data Processors</strong> under binding data processing agreements. Each processor is contractually bound to protect your data and prohibited from using it for its own commercial purposes:</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sub-Processor</th>
+              <th>Role / Service Provided</th>
+              <th>Data Processed</th>
+              <th>Location / Safeguards</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase, Inc.</strong></td>
+              <td>Encrypted PostgreSQL cloud database, user authentication, serverless webhook processing, and audio asset storage</td>
+              <td>Account identifiers, encrypted user/family logs, authentication tokens</td>
+              <td>United States / EU (Standard Contractual Clauses &amp; AES-256 Encryption)</td>
+            </tr>
+            <tr>
+              <td><strong>RevenueCat, Inc.</strong></td>
+              <td>Cross-platform App Store &amp; Google Play subscription receipt validation and webhook entitlement sync</td>
+              <td>Pseudonymous App User UUID, App Store / Play Store transaction receipts &amp; renewal status (zero health logs or payment card numbers)</td>
+              <td>United States (Standard Contractual Clauses)</td>
+            </tr>
+            <tr>
+              <td><strong>Plus Five Five, Inc. (Resend)</strong></td>
+              <td>Transactional email delivery (8-digit account recovery/verification codes and support replies via mail.thehazel.app)</td>
+              <td>Recipient email address and transactional security codes (no health logs)</td>
+              <td>European Union (Ireland, eu-west-1) / Standard Contractual Clauses</td>
+            </tr>
+            <tr>
+              <td><strong>Apple Inc.</strong></td>
+              <td>iOS App Store distribution, Sign in with Apple, Apple Push Notification service (APNs), In-App Purchases</td>
+              <td>Device push tokens, subscription receipts, optional Apple ID / Private Relay email</td>
+              <td>United States / Global</td>
+            </tr>
+            <tr>
+              <td><strong>Google LLC</strong></td>
+              <td>Google Play Store distribution, Google Sign-In, Firebase Cloud Messaging (FCM), Google Play Billing, Workspace Support Email</td>
+              <td>Device push tokens, subscription receipts, optional Google OAuth profile, support emails</td>
+              <td>United States / Global</td>
+            </tr>
+            <tr>
+              <td><strong>Cloudflare, Inc. &amp; GitHub, Inc.</strong></td>
+              <td>DNS security, TLS/SSL encryption, and static website hosting for thehazel.app</td>
+              <td>Standard web server HTTP request logs (IP address, browser user-agent) when visiting the Website</td>
+              <td>United States / Global</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.4. Family Workspace Synchronization &amp; Member Isolation</h3>
+      <p>If you invite a spouse, partner, grandparent, or caregiver to join your Family Workspace via your 6-character Family Invite Code (up to 8 total members per workspace), logged data within that workspace synchronizes across authorized members' devices. You remain in complete control of your Family Workspace: the Primary Owner may remove any Collaborator at any time, and any Collaborator may leave the workspace at any time. The instant a member leaves or is removed, cryptographic database Row-Level Security (RLS) immediately revokes their read and write access to that Family Workspace.</p>
+
+      <h3>4.5. Apple In-App Purchase Consumption Data</h3>
+      <p>If you use our App on iOS and make in-app purchases, you consent to our sharing of limited, non-health subscription consumption metadata with Apple strictly to assist Apple in resolving refund requests submitted to Apple, in accordance with Apple’s policies. This never includes any logged health, cycle, pregnancy, or baby care entries.</p>
+
+      <h3>4.6. Google API Services Limited Use Disclosure</h3>
+      <p>To the extent our Services access, use, or transfer information received from Google APIs, our use and transfer to any other app of information received from Google APIs will adhere to the <strong>Google API Services User Data Policy</strong>, including the <strong>Limited Use</strong> requirements: (a) we limit our use of data to providing or improving user-facing features prominent in the App’s interface; (b) we never transfer or sell data to third parties for advertising, data brokerage, or credit-worthiness determination; (c) we do not allow humans to read user data unless we have your affirmative agreement for a specific support request or as required for security/legal compliance; and (d) we never use user data to train generalized or third-party artificial intelligence models.</p>
+
+      <h3>4.7. Legal Obligations, Vital Safety, and Business Transfers</h3>
+      <p>We may preserve or disclose limited information only if strictly required to do so by applicable law, subpoena, or valid court order, or when we believe in good faith that disclosure is necessary to protect the vital safety of an individual, prevent fraud or security breaches, or defend against legal claims. In the event of a merger, acquisition, reorganization, or sale of assets of Intervada Solutions LLC, user information may be transferred only if the successor entity commits to bound compliance with the privacy protections set forth in this Privacy Policy and after providing notice to users where required by law.</p>
+
+      <hr />
+      <h2 id="account-deletion">5. Data Retention and Self-Service Account / Data Deletion</h2>
+      <h3>5.1. How Long We Retain Your Data</h3>
+      <p>We retain your personal information and logged data for as long as your account remains active and as necessary to provide you with the Services. If your subscription pauses or expires without you deleting your account, we preserve your encrypted historical logs in read-safe storage so you do not lose precious family memories if you later renew. If your account remains completely inactive for twenty-four (24) consecutive months, we may delete your inactive account and associated data after sending prior notice to your registered email address. You may trigger immediate deletion at any time.</p>
+
+      <h3>5.2. How to Permanently Delete Your Account &amp; Data</h3>
+      <p>You have the absolute right to revoke consent and permanently delete your account and personal data at any time through either method below:</p>
+      <ol>
+        <li><strong>In-App Self-Service Deletion (Immediate):</strong> Open the Hazel App, navigate to <strong>Profile / Settings &gt; Delete Account</strong>, and confirm permanent deletion.</li>
+        <li><strong>Web or Email Deletion Request (If You Uninstalled the App):</strong> Submit a request selecting <em>"Account &amp; Data Deletion Request"</em> on our <a href="contact.html">Contact Support</a> page or email <strong>support@thehazel.app</strong> from the email address registered to your account.</li>
+      </ol>
+      <p><strong>What Happens Upon Deletion &amp; Subscription Billing Reminder:</strong></p>
+      <ul>
+        <li>When you trigger in-app deletion, your personal profile, authentication credentials, and owned workspace health logs are immediately purged from our active production database. Email/web deletion requests are processed within <strong>fifteen (15) business days</strong> (and always within thirty (30) days). Encrypted disaster-recovery backup snapshots roll off automatically within thirty (30) to ninety (90) days.</li>
+        <li><strong>Important Subscription Notice:</strong> Deleting your Hazel Account inside the App cannot cancel recurring billing managed by Apple or Google. If you are a Primary Owner with an active Hazel Pro subscription or trial, please also cancel your subscription in your <strong>Apple ID Subscriptions</strong> or <strong>Google Play Subscriptions</strong> settings at least 24 hours before your next renewal date.</li>
+      </ul>
+
+      <hr />
+      <h2>6. Children’s Privacy (COPPA &amp; Global Minors Compliance)</h2>
+      <p><strong>Our Services are directed exclusively to adults (parents, expectant parents, and legal guardians) and are not intended for use by children.</strong></p>
+      <ul>
+        <li><strong>Minimum Age Requirements:</strong> You must be at least <strong>18 years of age</strong> to create an account and use the Services (or at least <strong>16 years of age</strong> in the European Economic Area, the United Kingdom, Switzerland, and Canada, or <strong>13 years of age</strong> in the United States and Australia with verifiable parent or guardian consent).</li>
+        <li><strong>Infant and Child Care Logs:</strong> We do not knowingly collect personal information directly from children under the age of 13 (or under 16 in the EEA, UK, Switzerland, and Canada). Where you input information about your own baby or toddler into the App—such as your child’s birth date, sleep patterns, feeding history, known food allergens, or reached developmental milestones—that information is provided to us <strong>solely by you as the adult parent or legal guardian</strong> to assist you in tracking your child’s care.</li>
+        <li><strong>Immediate Removal:</strong> If we discover or are notified that a child under the applicable minimum age has registered an account or submitted personal data directly to us without parental consent, we will immediately terminate the account and permanently delete all associated data. If you believe a child has provided data to us, please contact <strong>support@thehazel.app</strong>.</li>
+      </ul>
+
+      <hr />
+      <h2>7. Data Security</h2>
+      <p>We implement rigorous technical, physical, and organizational safeguards designed to protect sensitive personal and health data against unauthorized access, loss, misuse, alteration, or disclosure:</p>
+      <ul>
+        <li><strong>Encryption in Transit:</strong> All network traffic between the App/Website and our servers is encrypted using modern Transport Layer Security (<strong>HTTPS / TLS 1.2 and TLS 1.3</strong>).</li>
+        <li><strong>Encryption at Rest:</strong> All cloud database tables, authentication credentials, and backup snapshots are encrypted at rest using industry-standard <strong>AES-256</strong> encryption.</li>
+        <li><strong>Cryptographic Row-Level Security (RLS):</strong> Our database architecture enforces strict access controls so that your personal and family logs can only be queried by your authenticated user token and active members of your Family Workspace.</li>
+        <li><strong>Strict Internal Access Controls:</strong> Access to production infrastructure is restricted to authorized personnel bound by strict confidentiality obligations.</li>
+        <li><strong>Security Incident Notification:</strong> While no method of electronic storage or transmission over the internet is 100% impenetrable, in the unlikely event of a security breach affecting your personal data, we will promptly notify affected users and relevant data protection authorities in accordance with applicable law.</li>
+      </ul>
+
+      <hr />
+      <h2>8. Your Privacy Rights and How to Exercise Them</h2>
+      <p>Regardless of where you live, we extend high-standard data protection rights to all users of Hazel:</p>
+      <ol>
+        <li><strong>Right to Access &amp; Know:</strong> Confirm whether we process your personal data and receive a copy of the personal data we hold about you.</li>
+        <li><strong>Right to Data Portability:</strong> Receive your personal data in a structured, commonly used, and machine-readable format (such as JSON or CSV).</li>
+        <li><strong>Right to Rectification (Correction):</strong> Edit, update, or correct your profile details and logged entries directly within the App at any time, or ask us to correct inaccurate information.</li>
+        <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Delete your account and personal data at any time via the in-app <strong>Delete Account</strong> button, our <a href="contact.html">Contact Support</a> form, or email.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Withdraw your explicit consent for processing health, fertility, pregnancy, and infant logs at any time.</li>
+        <li><strong>Right to Restrict or Object to Processing:</strong> Ask us to restrict or stop processing your personal data in certain circumstances, or disable push notifications anytime in your device settings.</li>
+      </ol>
+      <p><strong>How to Submit a Request &amp; Verification:</strong><br />
+      Email <strong>support@thehazel.app</strong> with the subject line <em>"Privacy Rights Request"</em>. To protect your sensitive data from unauthorized disclosure, we verify your identity by confirming that the request originates from the email address registered to your account. We respond to all verified requests free of charge within <strong>thirty (30) days</strong> (or shorter where mandated by local law).</p>
+
+      <hr />
+      <h2 id="gdpr">9. Jurisdiction-Specific Privacy Disclosures</h2>
+      <h3>9.1. European Economic Area (EEA), United Kingdom (UK), and Switzerland</h3>
+      <p>If you reside in the EEA, the UK, or Switzerland, Intervada Solutions LLC acts as the "Data Controller" of your personal data under the EU GDPR, the UK GDPR, and the Swiss FADP. In addition to the rights listed in Section 8, you have the right to lodge a complaint with your local supervisory authority:</p>
+      <ul>
+        <li><strong>EEA Residents:</strong> Your national Data Protection Authority (<a href="https://edpb.europa.eu/about-edpb/board/members_en" target="_blank" rel="noopener">edpb.europa.eu</a>).</li>
+        <li><strong>UK Residents:</strong> The Information Commissioner’s Office (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>).</li>
+        <li><strong>Swiss Residents:</strong> The Federal Data Protection and Information Commissioner — FDPIC (<a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">edoeb.admin.ch</a>).</li>
+      </ul>
+
+      <h3 id="us-state-privacy">9.2. United States Residents (California, Washington, Nevada &amp; Other States)</h3>
+      <h4>A. California Residents (CCPA / CPRA &amp; Shine the Light)</h4>
+      <p>Under the California Consumer Privacy Act, as amended by the CPRA (Cal. Civ. Code § 1798.100 et seq.):</p>
+      <ul>
+        <li><strong>Categories of Personal Information Collected:</strong> Identifiers (email, optional nickname), Sensitive Personal Information (user-logged health, cycle, pregnancy, and infant care data), Commercial/Subscription status (App Store / Play Store entitlement status), and Device technical activity (crash diagnostics and time zone).</li>
+        <li><strong>No Sale or Sharing for Behavioral Advertising:</strong> <strong>Intervada Solutions LLC does not "sell" or "share" (as defined under the CCPA/CPRA for cross-context behavioral advertising) your Personal Information or Sensitive Personal Information</strong>, and has not done so in the past 12 months.</li>
+        <li><strong>Limitation on Use of Sensitive Personal Information:</strong> We collect and use Sensitive Personal Information solely to perform the tracking and synchronization Services reasonably expected and requested by you, and to ensure security and integrity (Cal. Civ. Code § 1798.121).</li>
+        <li><strong>Non-Discrimination &amp; Shine the Light:</strong> We never discriminate against users for exercising privacy rights and do not disclose personal information to third parties for their direct marketing purposes (Cal. Civ. Code § 1798.83).</li>
+      </ul>
+
+      <h4>B. Washington State (My Health My Data Act) &amp; Nevada (NRS Chapter 603A) Consumer Health Data Notice</h4>
+      <p>For residents of Washington State, Nevada, and other U.S. states with consumer health privacy statutes (including Connecticut, Virginia, Colorado, Texas, and Oregon):</p>
+      <ol>
+        <li><strong>Categories Collected:</strong> Only the reproductive, maternal, and infant health metrics you voluntarily log in the App, as itemized in Section 2.2.</li>
+        <li><strong>Purpose of Collection &amp; Use:</strong> Strictly to provide the cycle calculations, pregnancy tracking, sleep scheduling, nutrition/allergen logging, milestone tracking, and family workspace sync you request.</li>
+        <li><strong>Sources:</strong> Collected 100% directly from you (and authorized members of your Family Workspace) when entering logs into the App.</li>
+        <li><strong>No Sale or Third-Party Advertising Sharing:</strong> <strong>We never sell Consumer Health Data and never share it with third-party advertisers or data brokers.</strong> Consumer Health Data is transmitted in encrypted form solely to our cloud database processor (Supabase, Inc.) and, if you explicitly enable Family Sharing, to members of your Family Workspace.</li>
+        <li><strong>Exercising Rights &amp; Appeals:</strong> You may confirm collection, withdraw consent, or permanently delete Consumer Health Data via <strong>Profile / Settings &gt; Delete Account</strong> or by emailing <strong>support@thehazel.app</strong>. If a request is denied, you may appeal by emailing <strong>support@thehazel.app</strong> with the subject <em>"Privacy Appeal"</em>, and we will respond in writing within forty-five (45) days.</li>
+      </ol>
+
+      <h3>9.3. Canada Residents (PIPEDA &amp; Provincial Privacy Laws)</h3>
+      <p>If you reside in Canada (including Quebec under Law 25), we collect, use, and disclose your personal information only with your meaningful consent for the purposes identified in this Policy. Your personal information is stored on encrypted cloud servers in the United States and/or European Union. You may access, rectify, withdraw consent, or delete your account via the App or by contacting our Privacy Officer at <strong>support@thehazel.app</strong>, or contact the Office of the Privacy Commissioner of Canada (<a href="https://www.priv.gc.ca" target="_blank" rel="noopener">priv.gc.ca</a>).</p>
+
+      <h3>9.4. Australia, New Zealand &amp; South Africa Residents</h3>
+      <p>We handle health and personal information in accordance with the Australian Privacy Principles (<em>Privacy Act 1988</em> (Cth)), New Zealand’s Information Privacy Principles (<em>Privacy Act 2020</em>), and South Africa’s <em>Protection of Personal Information Act</em> (POPIA). Sensitive health data is collected solely with your express consent when logged in the App and is never used for direct marketing. You may access, correct, or delete your data or submit a privacy complaint at <strong>support@thehazel.app</strong> (answered within 30 days), or contact the OAIC (<a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>), the NZ Privacy Commissioner (<a href="https://www.privacy.org.nz" target="_blank" rel="noopener">privacy.org.nz</a>), or South Africa’s Information Regulator.</p>
+
+      <hr />
+      <h2>10. International Data Transfers</h2>
+      <p>Intervada Solutions LLC is headquartered in the State of Wyoming, United States. When you use the Services from outside the United States—including from the EEA, the United Kingdom, Switzerland, Canada, Australia, New Zealand, or South Africa—your personal data is transferred to, stored, and processed on secure cloud servers located in the United States and/or the European Union (including Ireland for transactional email delivery).</p>
+      <p>Whenever we transfer personal data out of the EEA, the UK, or Switzerland to a jurisdiction not formally recognized as providing an equivalent level of data protection, we implement legally recognized transfer mechanisms, including the European Commission’s <strong>Standard Contractual Clauses (SCCs)</strong>, the UK International Data Transfer Addendum, Swiss FADP transfer safeguards, and supplementary encryption (AES-256 at rest and TLS in transit).</p>
+
+      <hr />
+      <h2>11. Third-Party Links and Educational References</h2>
+      <p>The App and Website may reference or contain links to external websites, pediatric organizations, or educational resources (such as Pathways.org, the American Academy of Pediatrics, or the World Health Organization). This Privacy Policy applies only to Services operated by Intervada Solutions LLC. We do not control and are not responsible for the privacy practices of external websites.</p>
+
+      <hr />
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We review this Privacy Policy regularly and may update it from time to time to reflect new App features, operational adjustments, or changes in data protection laws. When we make material changes, we will notify you through an in-app notice or via email prior to the change becoming effective, and we will update the "Last Updated" date at the top of this policy.</p>
+
+      <hr />
+      <h2>13. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your privacy rights, or how we handle your data, please contact us at:</p>
+      <p><strong>Intervada Solutions LLC</strong><br />
+      Attn: Hazel Privacy &amp; Data Protection<br />
+      30 N Gould St, STE R<br />
+      Sheridan, WY 82801, United States<br />
+      <strong>Email:</strong> <a href="mailto:support@thehazel.app">support@thehazel.app</a><br />
+      <strong>Website:</strong> <a href="https://thehazel.app">https://thehazel.app</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <!-- FOOTER LOGO PLACEHOLDER: Uses the same assets/hazel-logo.png path -->
+          <div class="brand-logo-slot has-image" style="width: 34px; height: 34px; border-radius: 10px;">
+            <img
+              src="assets/hazel-logo.png"
+              alt="Hazel Logo"
+              class="brand-logo-img"
+              onerror="this.style.display='none'; this.parentElement.classList.remove('has-image'); this.nextElementSibling.style.display='inline';"
+            >
+            <span class="brand-logo-fallback" style="font-size: 0.6rem;">LOGO</span>
+          </div>
+          <h4>Hazel</h4>
+        </div>
+        <p>A calm, unified companion supporting growing families from fertility and pregnancy through baby sleep, first foods, and early milestones.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html#us-state-privacy">US Consumer Health Notice</a></li>
+          <li><a href="privacy.html#gdpr">EU / UK / Swiss GDPR</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="contact.html">Contact Support</a></li>
+          <li><a href="privacy.html#account-deletion">Account &amp; Data Deletion</a></li>
+          <li><a href="mailto:support@thehazel.app">support@thehazel.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Intervada Solutions LLC. All rights reserved.</div>
+      <div>Privacy-first family tracking • Zero health-data ad sharing</div>
+    </div>
+  </footer>
+</body>
+</html>
